@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageIdenfi" rowHeight="104" id="KGk-i7-Jjw" customClass="SPMessageCell">
+            <rect key="frame" x="0.0" y="0.0" width="458" height="104"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="content" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Shz-Wo-LBV">
+                        <rect key="frame" x="10" y="5" width="438" height="63"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQB-c3-lzN">
+                        <rect key="frame" x="416" y="78" width="32" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="16I-za-it9"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="1" green="0.35918079159999999" blue="0.077255763640000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Shz-Wo-LBV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="85k-NB-huA"/>
+                    <constraint firstAttribute="trailing" secondItem="FQB-c3-lzN" secondAttribute="trailing" constant="10" id="YW9-Fz-eFP"/>
+                    <constraint firstAttribute="trailing" secondItem="Shz-Wo-LBV" secondAttribute="trailing" constant="10" id="duR-wv-DyQ"/>
+                    <constraint firstAttribute="bottom" secondItem="FQB-c3-lzN" secondAttribute="bottom" constant="5" id="iiT-tF-65y"/>
+                    <constraint firstItem="Shz-Wo-LBV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="ogc-xb-QRg"/>
+                    <constraint firstItem="FQB-c3-lzN" firstAttribute="top" secondItem="Shz-Wo-LBV" secondAttribute="bottom" constant="10" id="xIA-P4-X6k"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="contentLabel" destination="Shz-Wo-LBV" id="QEh-IX-EUN"/>
+                <outlet property="timeLabel" destination="FQB-c3-lzN" id="RJE-zr-Hw4"/>
+            </connections>
+            <point key="canvasLocation" x="270" y="138"/>
+        </tableViewCell>
+    </objects>
+</document>

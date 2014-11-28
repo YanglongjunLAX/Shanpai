@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SPAdView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4em-dO-7LN">
+                    <rect key="frame" x="0.0" y="570" width="600" height="30"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12232434353" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rv1-p6-UzB">
+                            <rect key="frame" x="10" y="0.0" width="510" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Xyo-YI-NJJ">
+                            <rect key="frame" x="530" y="0.0" width="60" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="2Cm-L2-KdY"/>
+                            </constraints>
+                        </pageControl>
+                    </subviews>
+                    <color key="backgroundColor" red="0.47917374320652173" green="0.47917374320652173" blue="0.47917374320652173" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Xyo-YI-NJJ" secondAttribute="bottom" id="4zG-W5-Wdv"/>
+                        <constraint firstItem="Rv1-p6-UzB" firstAttribute="leading" secondItem="4em-dO-7LN" secondAttribute="leading" constant="10" id="FCU-V8-tez"/>
+                        <constraint firstItem="Xyo-YI-NJJ" firstAttribute="leading" secondItem="Rv1-p6-UzB" secondAttribute="trailing" constant="10" id="Llr-Jm-1p5"/>
+                        <constraint firstAttribute="bottom" secondItem="Rv1-p6-UzB" secondAttribute="bottom" id="XDD-XW-KZf"/>
+                        <constraint firstAttribute="trailing" secondItem="Xyo-YI-NJJ" secondAttribute="trailing" constant="10" id="Zhg-Ls-yNH"/>
+                        <constraint firstItem="Xyo-YI-NJJ" firstAttribute="top" secondItem="4em-dO-7LN" secondAttribute="top" id="gKG-W8-zWI"/>
+                        <constraint firstItem="Rv1-p6-UzB" firstAttribute="top" secondItem="4em-dO-7LN" secondAttribute="top" id="gd9-9f-PAk"/>
+                        <constraint firstAttribute="height" constant="30" id="pSw-Be-AO0"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="4em-dO-7LN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="EUY-Df-mN0"/>
+                <constraint firstAttribute="bottom" secondItem="4em-dO-7LN" secondAttribute="bottom" id="Pzh-g4-EQM"/>
+                <constraint firstAttribute="trailing" secondItem="4em-dO-7LN" secondAttribute="trailing" id="iRf-oe-LYD"/>
+            </constraints>
+            <connections>
+                <outlet property="bottomView" destination="4em-dO-7LN" id="uKp-8T-X1a"/>
+                <outlet property="explainLabel" destination="Rv1-p6-UzB" id="Ycc-DV-HrW"/>
+                <outlet property="pageControl" destination="Xyo-YI-NJJ" id="4jL-5S-LXx"/>
+            </connections>
+        </view>
+    </objects>
+</document>

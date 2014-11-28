@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SPExchangeController">
+            <connections>
+                <outlet property="buyButton" destination="Bew-YM-ucs" id="ZRi-bZ-ipG"/>
+                <outlet property="costLabel" destination="vea-E9-u03" id="dv0-0z-6AV"/>
+                <outlet property="imageView" destination="r30-gj-o17" id="nPr-B5-i2l"/>
+                <outlet property="nameLabel" destination="z7V-JB-BON" id="0Fx-6T-VtH"/>
+                <outlet property="numberLabel" destination="yST-Yx-jZI" id="4MP-AL-Qek"/>
+                <outlet property="textView" destination="P4U-qP-mnm" id="wh8-4t-B8L"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="r30-gj-o17">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="130"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="130" id="tp3-Y8-y6K"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z7V-JB-BON">
+                    <rect key="frame" x="10" y="138" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="数量：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ege-0G-4vb">
+                    <rect key="frame" x="499" y="138" width="51" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yST-Yx-jZI">
+                    <rect key="frame" x="555" y="138" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P4U-qP-mnm">
+                    <rect key="frame" x="0.0" y="160" width="600" height="380"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vea-E9-u03">
+                    <rect key="frame" x="10" y="569" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="金豆" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OTf-ye-IsF">
+                    <rect key="frame" x="72" y="576" width="22" height="14"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bew-YM-ucs">
+                    <rect key="frame" x="423" y="543" width="167" height="47"/>
+                    <state key="normal" title="立即兑换" backgroundImage="task_btn_start">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="z7V-JB-BON" firstAttribute="top" secondItem="r30-gj-o17" secondAttribute="bottom" constant="8" id="1km-r0-Oaz"/>
+                <constraint firstItem="z7V-JB-BON" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="45W-9l-qgL"/>
+                <constraint firstItem="r30-gj-o17" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="7qg-PA-hxX"/>
+                <constraint firstAttribute="bottom" secondItem="Bew-YM-ucs" secondAttribute="bottom" constant="10" id="BAs-cy-zQf"/>
+                <constraint firstItem="OTf-ye-IsF" firstAttribute="bottom" secondItem="vea-E9-u03" secondAttribute="bottom" id="LsC-xh-6Vb"/>
+                <constraint firstAttribute="trailing" secondItem="ege-0G-4vb" secondAttribute="trailing" constant="50" id="QUE-O8-wxy"/>
+                <constraint firstAttribute="bottom" secondItem="P4U-qP-mnm" secondAttribute="bottom" constant="60" id="QeS-mY-4HC"/>
+                <constraint firstAttribute="trailing" secondItem="Bew-YM-ucs" secondAttribute="trailing" constant="10" id="SG8-cH-RD1"/>
+                <constraint firstAttribute="trailing" secondItem="r30-gj-o17" secondAttribute="trailing" id="T1g-oJ-gLn"/>
+                <constraint firstItem="P4U-qP-mnm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="160" id="Tlv-j0-8SN"/>
+                <constraint firstItem="yST-Yx-jZI" firstAttribute="bottom" secondItem="ege-0G-4vb" secondAttribute="bottom" id="YOZ-aL-0Wx"/>
+                <constraint firstItem="vea-E9-u03" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="coL-80-1Dg"/>
+                <constraint firstAttribute="trailing" secondItem="P4U-qP-mnm" secondAttribute="trailing" id="gJS-mv-Pwz"/>
+                <constraint firstItem="yST-Yx-jZI" firstAttribute="leading" secondItem="ege-0G-4vb" secondAttribute="trailing" constant="5" id="mOW-nF-SG9"/>
+                <constraint firstItem="P4U-qP-mnm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mXF-sr-bXL"/>
+                <constraint firstAttribute="bottom" secondItem="vea-E9-u03" secondAttribute="bottom" constant="10" id="sGa-2w-cG0"/>
+                <constraint firstItem="r30-gj-o17" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="tdX-a7-CuM"/>
+                <constraint firstItem="OTf-ye-IsF" firstAttribute="leading" secondItem="vea-E9-u03" secondAttribute="trailing" constant="20" id="uXY-tX-5hj"/>
+                <constraint firstItem="ege-0G-4vb" firstAttribute="top" secondItem="r30-gj-o17" secondAttribute="bottom" constant="8" id="vbD-0c-Fbd"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="task_btn_start" width="167" height="47"/>
+    </resources>
+</document>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SpStoreViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="170"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="150" height="170"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="80U-zJ-Lui">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="100"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLu-3u-k78">
+                        <rect key="frame" x="0.0" y="100" width="150" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="qkF-gH-qmz"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NcJ-Yh-cFB">
+                        <rect key="frame" x="0.0" y="120" width="150" height="50"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="金豆" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRB-Ln-cWP">
+                                <rect key="frame" x="8" y="23" width="28" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1111" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGd-p5-HgM">
+                                <rect key="frame" x="38" y="23" width="32" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mall_duihuan_btn" translatesAutoresizingMaskIntoConstraints="NO" id="U4d-LI-YnA">
+                                <rect key="frame" x="105" y="12" width="40" height="23"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gRB-Ln-cWP" firstAttribute="leading" secondItem="NcJ-Yh-cFB" secondAttribute="leading" constant="8" id="41L-du-orT"/>
+                            <constraint firstItem="RGd-p5-HgM" firstAttribute="bottom" secondItem="gRB-Ln-cWP" secondAttribute="bottom" id="7e9-Ey-p4h"/>
+                            <constraint firstItem="RGd-p5-HgM" firstAttribute="leading" secondItem="gRB-Ln-cWP" secondAttribute="trailing" constant="2" id="RWx-ah-pN4"/>
+                            <constraint firstAttribute="bottom" secondItem="gRB-Ln-cWP" secondAttribute="bottom" constant="10" id="UA8-f4-3hx"/>
+                            <constraint firstAttribute="trailing" secondItem="U4d-LI-YnA" secondAttribute="trailing" constant="5" id="XMt-nO-OYL"/>
+                            <constraint firstAttribute="bottom" secondItem="U4d-LI-YnA" secondAttribute="bottom" constant="15" id="oQO-UE-14U"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mall_tag_hot_icon" translatesAutoresizingMaskIntoConstraints="NO" id="IW0-wd-eo2">
+                        <rect key="frame" x="0.0" y="82" width="37" height="18"/>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="GLu-3u-k78" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="1bU-fm-lq0"/>
+                <constraint firstItem="IW0-wd-eo2" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="GkX-0G-zNe"/>
+                <constraint firstAttribute="trailing" secondItem="GLu-3u-k78" secondAttribute="trailing" id="JCQ-ZX-DcL"/>
+                <constraint firstItem="80U-zJ-Lui" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="TMV-Iq-sD8"/>
+                <constraint firstAttribute="trailing" secondItem="NcJ-Yh-cFB" secondAttribute="trailing" id="TQQ-fF-1O1"/>
+                <constraint firstAttribute="trailing" secondItem="80U-zJ-Lui" secondAttribute="trailing" id="e3I-P1-k2s"/>
+                <constraint firstItem="GLu-3u-k78" firstAttribute="top" secondItem="80U-zJ-Lui" secondAttribute="bottom" id="gEB-lP-mBq"/>
+                <constraint firstAttribute="bottom" secondItem="80U-zJ-Lui" secondAttribute="bottom" constant="70" id="ojo-AY-Ghh"/>
+                <constraint firstAttribute="bottom" secondItem="NcJ-Yh-cFB" secondAttribute="bottom" id="pVU-rc-Cfy"/>
+                <constraint firstItem="NcJ-Yh-cFB" firstAttribute="top" secondItem="GLu-3u-k78" secondAttribute="bottom" id="qsn-Lg-61l"/>
+                <constraint firstAttribute="bottom" secondItem="IW0-wd-eo2" secondAttribute="bottom" constant="70" id="uiL-zM-Dlf"/>
+                <constraint firstItem="NcJ-Yh-cFB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="vAX-OD-y7F"/>
+                <constraint firstItem="80U-zJ-Lui" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="yuK-GL-kkX"/>
+            </constraints>
+            <size key="customSize" width="150" height="170"/>
+            <connections>
+                <outlet property="bottomView" destination="NcJ-Yh-cFB" id="QAT-If-njD"/>
+                <outlet property="hotImageView" destination="IW0-wd-eo2" id="LSt-9g-1n3"/>
+                <outlet property="iconImageView" destination="80U-zJ-Lui" id="hSw-lv-ynN"/>
+                <outlet property="jinDouLabel" destination="RGd-p5-HgM" id="cn2-Su-EqN"/>
+                <outlet property="nameLabel" destination="GLu-3u-k78" id="sOj-gL-Neh"/>
+            </connections>
+            <point key="canvasLocation" x="680" y="343"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="mall_duihuan_btn" width="40" height="23"/>
+        <image name="mall_tag_hot_icon" width="37" height="18"/>
+    </resources>
+</document>

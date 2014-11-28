@@ -1,0 +1,24 @@
+//
+//  shanpai-Prefix.pch
+//  shanpai
+//
+//  Created by liang chunyan on 14-11-4.
+//  Copyright (c) 2014年 BaiLing-ShanBo. All rights reserved.
+//
+
+#ifndef shanpai_shanpai_Prefix_pch
+#define shanpai_shanpai_Prefix_pch
+    //引入的公共头文件
+    #import "HexColor.h"//十六进制表示颜色值
+    #import "UIView+AutoLayout.h"//自动布局
+    #import "NSString+File.h"//字符串
+    #import "SPGlobalStatement.h"//全局的状态声明
+    #import "UIImage+BLCategory.h"//图片
+    #import "AFNetworking.h"
+    #import "UIImageView+AFNetworking.h"
+    #import "SPHttpClient.h"
+    #import "SPUserData.h"//用户数据信息
+    #import "SPUserDefault.h"
+    #import "SVProgressHUD.h"
+    #import "SVPullToRefresh.h"
+#endif
