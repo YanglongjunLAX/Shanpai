@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="GameDynamic" rowHeight="64" id="KGk-i7-Jjw" customClass="SPGameDynamicCell">
+            <rect key="frame" x="0.0" y="0.0" width="360" height="64"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pGi-kT-jau">
+                        <rect key="frame" x="10" y="10" width="30" height="43"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="cFm-FX-Fym"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[猜拳]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUC-FH-Enu">
+                        <rect key="frame" x="45" y="21" width="43" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hfm-Ba-Ge1">
+                        <rect key="frame" x="93" y="22" width="40" height="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.44739300269999999" green="0.44739300269999999" blue="0.44739300269999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Hfm-Ba-Ge1" firstAttribute="leading" secondItem="fUC-FH-Enu" secondAttribute="trailing" constant="5" id="BnH-oD-FKl"/>
+                    <constraint firstAttribute="bottom" secondItem="pGi-kT-jau" secondAttribute="bottom" constant="10" id="EK3-O8-6Mq"/>
+                    <constraint firstItem="pGi-kT-jau" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Mom-D0-qqz"/>
+                    <constraint firstItem="fUC-FH-Enu" firstAttribute="leading" secondItem="pGi-kT-jau" secondAttribute="trailing" constant="5" id="Ro1-qS-0hY"/>
+                    <constraint firstAttribute="centerY" secondItem="fUC-FH-Enu" secondAttribute="centerY" id="dlV-ka-Omd"/>
+                    <constraint firstAttribute="centerY" secondItem="Hfm-Ba-Ge1" secondAttribute="centerY" id="riy-Kt-IhX"/>
+                    <constraint firstItem="pGi-kT-jau" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="zl3-Hg-AS2"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="gameContent" destination="Hfm-Ba-Ge1" id="Zct-Nq-b9T"/>
+                <outlet property="iconImage" destination="pGi-kT-jau" id="03k-aD-5G0"/>
+                <outlet property="tagLabel" destination="fUC-FH-Enu" id="Aac-bR-6Kl"/>
+            </connections>
+            <point key="canvasLocation" x="504" y="231"/>
+        </tableViewCell>
+    </objects>
+</document>

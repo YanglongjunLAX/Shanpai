@@ -39,10 +39,27 @@
 		014D358A1A08CE5700D86711 /* BLTabbarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 014D35891A08CE5700D86711 /* BLTabbarItem.m */; };
 		014D358D1A08CEC600D86711 /* NSString+File.m in Sources */ = {isa = PBXBuildFile; fileRef = 014D358C1A08CEC600D86711 /* NSString+File.m */; };
 		014D35BF1A08D75400D86711 /* SPTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 014D35BE1A08D75400D86711 /* SPTableViewController.m */; };
+		01627DCA1A2EA37300C189C6 /* SPDynamicHead.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01627DC91A2EA37300C189C6 /* SPDynamicHead.xib */; };
+		01627DCD1A2EBE0400C189C6 /* SPPKView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01627DCC1A2EBE0400C189C6 /* SPPKView.m */; };
+		01627DCF1A2EBE4C00C189C6 /* SPPKTaiView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01627DCE1A2EBE4C00C189C6 /* SPPKTaiView.xib */; };
+		01627DD21A2EEDE600C189C6 /* SPGameDynamicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01627DD11A2EEDE600C189C6 /* SPGameDynamicView.m */; };
+		01627DD41A2EEE0E00C189C6 /* SPGameDynamic.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01627DD31A2EEE0E00C189C6 /* SPGameDynamic.xib */; };
+		01627DD71A2EF1EA00C189C6 /* SPGameDynamicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 01627DD61A2EF1EA00C189C6 /* SPGameDynamicModel.m */; };
+		01627DDB1A2F029C00C189C6 /* SPGameDynamicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01627DD91A2F029C00C189C6 /* SPGameDynamicCell.m */; };
+		01627DDC1A2F029C00C189C6 /* SPGameDynamicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01627DDA1A2F029C00C189C6 /* SPGameDynamicCell.xib */; };
+		01627DDF1A2F114D00C189C6 /* SPGameDynamicHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01627DDE1A2F114D00C189C6 /* SPGameDynamicHeadView.m */; };
+		01627DE11A2F11F400C189C6 /* SPGameDynamicHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01627DE01A2F11F400C189C6 /* SPGameDynamicHeadView.xib */; };
+		016610DB1A2C689200B21F7F /* SPFansController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016610D91A2C689200B21F7F /* SPFansController.m */; };
+		016610DC1A2C689200B21F7F /* SPFansController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 016610DA1A2C689200B21F7F /* SPFansController.xib */; };
+		016610E01A2C709900B21F7F /* SPFansCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 016610DE1A2C709900B21F7F /* SPFansCell.m */; };
+		016610E11A2C709900B21F7F /* SPFansCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 016610DF1A2C709900B21F7F /* SPFansCell.xib */; };
 		016C4DDB1A1D8C630076320F /* spStoreHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 016C4DDA1A1D8C630076320F /* spStoreHeadView.xib */; };
 		016C4DDE1A1D8F050076320F /* spStoreHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C4DDD1A1D8F050076320F /* spStoreHeadView.m */; };
 		016C4DE51A1D9AA50076320F /* UIScrollView+SVInfiniteScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C4DE21A1D9AA50076320F /* UIScrollView+SVInfiniteScrolling.m */; };
 		016C4DE61A1D9AA50076320F /* UIScrollView+SVPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C4DE41A1D9AA50076320F /* UIScrollView+SVPullToRefresh.m */; };
+		01711A161A3480990090C8C7 /* SPTaskBeginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01711A141A3480990090C8C7 /* SPTaskBeginController.m */; };
+		01711A171A3480990090C8C7 /* SPTaskBeginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01711A151A3480990090C8C7 /* SPTaskBeginController.xib */; };
+		017A97B51A32FF6F00FE4182 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 017A97B41A32FF6F00FE4182 /* BaseModel.m */; };
 		01815EC81A10592600F80EA2 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 01815EC71A10592600F80EA2 /* SSKeychain.m */; };
 		01815ECD1A10599300F80EA2 /* SPUserData.m in Sources */ = {isa = PBXBuildFile; fileRef = 01815ECC1A10599300F80EA2 /* SPUserData.m */; };
 		01815ED31A1069E600F80EA2 /* Device.m in Sources */ = {isa = PBXBuildFile; fileRef = 01815ED01A1069E600F80EA2 /* Device.m */; };
@@ -58,15 +75,21 @@
 		0185D6DF1A26BDB700B3F37C /* SPExangeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0185D6DD1A26BDB700B3F37C /* SPExangeCell.m */; };
 		0185D6E01A26BDB700B3F37C /* SPExangeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0185D6DE1A26BDB700B3F37C /* SPExangeCell.xib */; };
 		0185D6E31A26C16700B3F37C /* SPExangeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0185D6E21A26C16700B3F37C /* SPExangeModel.m */; };
-		0185D6E71A26D5B900B3F37C /* SPGamedynamicController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0185D6E51A26D5B900B3F37C /* SPGamedynamicController.m */; };
-		0185D6E81A26D5B900B3F37C /* SPGamedynamicController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0185D6E61A26D5B900B3F37C /* SPGamedynamicController.xib */; };
 		0185D6EC1A26DAB000B3F37C /* SPTaskModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0185D6EB1A26DAB000B3F37C /* SPTaskModel.m */; };
 		0185D6F01A26FF0D00B3F37C /* SPTaskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0185D6EE1A26FF0D00B3F37C /* SPTaskCell.m */; };
 		0185D6F11A26FF0D00B3F37C /* SPTaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0185D6EF1A26FF0D00B3F37C /* SPTaskCell.xib */; };
-		0185D6F51A27105900B3F37C /* SPPKTaiController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0185D6F31A27105900B3F37C /* SPPKTaiController.m */; };
-		0185D6F61A27105900B3F37C /* SPPKTaiController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0185D6F41A27105900B3F37C /* SPPKTaiController.xib */; };
 		0185D6FA1A271E6000B3F37C /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0185D6F81A271E6000B3F37C /* TableViewCell.m */; };
 		0185D6FB1A271E6000B3F37C /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0185D6F91A271E6000B3F37C /* TableViewCell.xib */; };
+		01899FE51A30056900589F7C /* SPGoldRecordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01899FE31A30056900589F7C /* SPGoldRecordController.m */; };
+		01899FE61A30056900589F7C /* SPGoldRecordController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01899FE41A30056900589F7C /* SPGoldRecordController.xib */; };
+		01899FE91A30078400589F7C /* SPGoldenRecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 01899FE81A30078400589F7C /* SPGoldenRecordModel.m */; };
+		01899FED1A30151F00589F7C /* SPGoldenRecordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01899FEB1A30151F00589F7C /* SPGoldenRecordCell.m */; };
+		01899FEE1A30151F00589F7C /* SPGoldenRecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01899FEC1A30151F00589F7C /* SPGoldenRecordCell.xib */; };
+		01899FF21A30348800589F7C /* SPEditInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01899FF01A30348800589F7C /* SPEditInfoController.m */; };
+		01899FF31A30348800589F7C /* SPEditInfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01899FF11A30348800589F7C /* SPEditInfoController.xib */; };
+		01899FF71A30459800589F7C /* SPModifyInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01899FF51A30459800589F7C /* SPModifyInfoController.m */; };
+		01899FF81A30459800589F7C /* SPModifyInfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01899FF61A30459800589F7C /* SPModifyInfoController.xib */; };
+		01899FFC1A3065B800589F7C /* SPImageRecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 01899FFB1A3065B800589F7C /* SPImageRecordModel.m */; };
 		018E573B1A09BA7900BAA18D /* SPTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018E57391A09BA7900BAA18D /* SPTaskViewController.m */; };
 		018E573C1A09BA7900BAA18D /* SPTaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 018E573A1A09BA7900BAA18D /* SPTaskViewController.xib */; };
 		018E57421A09C9AF00BAA18D /* SPChangeToUser.xib in Resources */ = {isa = PBXBuildFile; fileRef = 018E57411A09C9AF00BAA18D /* SPChangeToUser.xib */; };
@@ -78,6 +101,18 @@
 		0191D0131A0B0CEB00FAE08F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0191D0121A0B0CEB00FAE08F /* Default-568h@2x.png */; };
 		019296B01A1B2A5E00E57C7A /* SPBrandCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 019296AE1A1B2A5E00E57C7A /* SPBrandCell.m */; };
 		019296B91A1B2CAE00E57C7A /* SPBrandData.m in Sources */ = {isa = PBXBuildFile; fileRef = 019296B81A1B2CAE00E57C7A /* SPBrandData.m */; };
+		01932E021A2D761100EC3138 /* SPMyAttentionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01932E001A2D761100EC3138 /* SPMyAttentionController.m */; };
+		01932E031A2D761100EC3138 /* SPMyAttentionController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01932E011A2D761100EC3138 /* SPMyAttentionController.xib */; };
+		01932E071A2D943300EC3138 /* SPFollowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01932E051A2D943300EC3138 /* SPFollowCell.m */; };
+		01932E081A2D943300EC3138 /* SPFollowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01932E061A2D943300EC3138 /* SPFollowCell.xib */; };
+		01932E0C1A2D9DB400EC3138 /* SPDyanmicController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01932E0A1A2D9DB400EC3138 /* SPDyanmicController.m */; };
+		01932E0D1A2D9DB400EC3138 /* SPDyanmicController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01932E0B1A2D9DB400EC3138 /* SPDyanmicController.xib */; };
+		01932E101A2DA06100EC3138 /* SPDynamicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 01932E0F1A2DA06100EC3138 /* SPDynamicModel.m */; };
+		01932E141A2DAFC600EC3138 /* SPDynamicHasImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01932E121A2DAFC600EC3138 /* SPDynamicHasImageCell.m */; };
+		01932E151A2DAFC600EC3138 /* SPDynamicHasImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01932E131A2DAFC600EC3138 /* SPDynamicHasImageCell.xib */; };
+		01932E191A2DB46F00EC3138 /* SPDynamicNoImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01932E171A2DB46E00EC3138 /* SPDynamicNoImageCell.m */; };
+		01932E1A1A2DB46F00EC3138 /* SPDynamicNoImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01932E181A2DB46F00EC3138 /* SPDynamicNoImageCell.xib */; };
+		01932E1D1A2DC10600EC3138 /* SPDynamicTableHead.m in Sources */ = {isa = PBXBuildFile; fileRef = 01932E1C1A2DC10600EC3138 /* SPDynamicTableHead.m */; };
 		019AB53A1A0C5FE90066E3D0 /* SPTaskAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 019AB5391A0C5FE90066E3D0 /* SPTaskAdView.xib */; };
 		019AB53D1A0C64890066E3D0 /* SPTaskADView.m in Sources */ = {isa = PBXBuildFile; fileRef = 019AB53C1A0C64890066E3D0 /* SPTaskADView.m */; };
 		01A477A21A256703000AF0E9 /* SPPKPoolController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A477A01A256703000AF0E9 /* SPPKPoolController.m */; };
@@ -85,6 +120,7 @@
 		01A477A71A256BE5000AF0E9 /* SPPoolModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A477A61A256BE5000AF0E9 /* SPPoolModel.m */; };
 		01A477AC1A2578CA000AF0E9 /* SPPoolCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A477AA1A2578CA000AF0E9 /* SPPoolCell.m */; };
 		01A477AD1A2578CA000AF0E9 /* SPPoolCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A477AB1A2578CA000AF0E9 /* SPPoolCell.xib */; };
+		01AE777F1A2D5B8B00915F69 /* SPFansModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 01AE777E1A2D5B8B00915F69 /* SPFansModel.m */; };
 		01B0EFE51A241A510063B143 /* SPMyMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B0EFE31A241A510063B143 /* SPMyMessageController.m */; };
 		01B0EFE61A241A510063B143 /* SPMyMessageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B0EFE41A241A510063B143 /* SPMyMessageController.xib */; };
 		01B0EFEA1A2427DC0063B143 /* SPMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B0EFE91A2427DC0063B143 /* SPMessageModel.m */; };
@@ -124,7 +160,20 @@
 		01ECE0DA1A0CAF2D00693595 /* TKProgressCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ECE0D41A0CAF2D00693595 /* TKProgressCircleView.m */; };
 		01ECE0DB1A0CAF2D00693595 /* UIView+TKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ECE0D61A0CAF2D00693595 /* UIView+TKCategory.m */; };
 		01ECE0DF1A0CB55800693595 /* SPHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ECE0DE1A0CB55800693595 /* SPHttpClient.m */; };
+		01EE84801A314FB100BF4A9C /* SPImageRecordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EE847E1A314FB100BF4A9C /* SPImageRecordController.m */; };
+		01EE84811A314FB100BF4A9C /* SPImageRecordController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EE847F1A314FB100BF4A9C /* SPImageRecordController.xib */; };
+		01EE84861A3153B500BF4A9C /* SPImageRecordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EE84841A3153B500BF4A9C /* SPImageRecordCell.m */; };
+		01EE84871A3153B500BF4A9C /* SPImageRecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EE84851A3153B500BF4A9C /* SPImageRecordCell.xib */; };
+		01EE848A1A31594100BF4A9C /* SPOpinionBackController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EE84891A31594100BF4A9C /* SPOpinionBackController.m */; };
+		01EE848E1A316B1E00BF4A9C /* SPGuessFingerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EE848C1A316B1E00BF4A9C /* SPGuessFingerController.m */; };
+		01EE848F1A316B1E00BF4A9C /* SPGuessFingerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EE848D1A316B1E00BF4A9C /* SPGuessFingerController.xib */; };
+		01EE84921A319FB100BF4A9C /* SPGuessFingerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EE84911A319FB100BF4A9C /* SPGuessFingerModel.m */; };
 		01F10E0D1A280CAE00C6F5FA /* SPTakePhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F10E0C1A280CAE00C6F5FA /* SPTakePhotoModel.m */; };
+		01F10E111A28238200C6F5FA /* SPdiscernController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F10E0F1A28238200C6F5FA /* SPdiscernController.m */; };
+		01F10E121A28238200C6F5FA /* SPdiscernController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01F10E101A28238200C6F5FA /* SPdiscernController.xib */; };
+		01F10E161A28250900C6F5FA /* SPtakeHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F10E151A28250900C6F5FA /* SPtakeHeadView.m */; };
+		01F10E181A28251A00C6F5FA /* SPtakeHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01F10E171A28251A00C6F5FA /* SPtakeHeadView.xib */; };
+		01F10E1C1A28262B00C6F5FA /* SSTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F10E1B1A28262B00C6F5FA /* SSTextView.m */; };
 		01FF28B91A22CC19004A104F /* SPBeanController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FF28B71A22CC19004A104F /* SPBeanController.m */; };
 		01FF28BA1A22CC19004A104F /* SPBeanController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01FF28B81A22CC19004A104F /* SPBeanController.xib */; };
 		01FF28BD1A22D3F4004A104F /* SPBeanHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FF28BC1A22D3F4004A104F /* SPBeanHeadView.m */; };
@@ -211,6 +260,27 @@
 		014D358C1A08CEC600D86711 /* NSString+File.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+File.m"; sourceTree = "<group>"; };
 		014D35BD1A08D75400D86711 /* SPTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTableViewController.h; sourceTree = "<group>"; };
 		014D35BE1A08D75400D86711 /* SPTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTableViewController.m; sourceTree = "<group>"; };
+		01627DC91A2EA37300C189C6 /* SPDynamicHead.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPDynamicHead.xib; sourceTree = "<group>"; };
+		01627DCB1A2EBE0400C189C6 /* SPPKView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPKView.h; sourceTree = "<group>"; };
+		01627DCC1A2EBE0400C189C6 /* SPPKView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPKView.m; sourceTree = "<group>"; };
+		01627DCE1A2EBE4C00C189C6 /* SPPKTaiView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPPKTaiView.xib; sourceTree = "<group>"; };
+		01627DD01A2EEDE600C189C6 /* SPGameDynamicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPGameDynamicView.h; sourceTree = "<group>"; };
+		01627DD11A2EEDE600C189C6 /* SPGameDynamicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPGameDynamicView.m; sourceTree = "<group>"; };
+		01627DD31A2EEE0E00C189C6 /* SPGameDynamic.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPGameDynamic.xib; sourceTree = "<group>"; };
+		01627DD51A2EF1E900C189C6 /* SPGameDynamicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPGameDynamicModel.h; sourceTree = "<group>"; };
+		01627DD61A2EF1EA00C189C6 /* SPGameDynamicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPGameDynamicModel.m; sourceTree = "<group>"; };
+		01627DD81A2F029C00C189C6 /* SPGameDynamicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPGameDynamicCell.h; sourceTree = "<group>"; };
+		01627DD91A2F029C00C189C6 /* SPGameDynamicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPGameDynamicCell.m; sourceTree = "<group>"; };
+		01627DDA1A2F029C00C189C6 /* SPGameDynamicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPGameDynamicCell.xib; sourceTree = "<group>"; };
+		01627DDD1A2F114D00C189C6 /* SPGameDynamicHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPGameDynamicHeadView.h; sourceTree = "<group>"; };
+		01627DDE1A2F114D00C189C6 /* SPGameDynamicHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPGameDynamicHeadView.m; sourceTree = "<group>"; };
+		01627DE01A2F11F400C189C6 /* SPGameDynamicHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPGameDynamicHeadView.xib; sourceTree = "<group>"; };
+		016610D81A2C689200B21F7F /* SPFansController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPFansController.h; sourceTree = "<group>"; };
+		016610D91A2C689200B21F7F /* SPFansController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPFansController.m; sourceTree = "<group>"; };
+		016610DA1A2C689200B21F7F /* SPFansController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPFansController.xib; sourceTree = "<group>"; };
+		016610DD1A2C709900B21F7F /* SPFansCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPFansCell.h; sourceTree = "<group>"; };
+		016610DE1A2C709900B21F7F /* SPFansCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPFansCell.m; sourceTree = "<group>"; };
+		016610DF1A2C709900B21F7F /* SPFansCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPFansCell.xib; sourceTree = "<group>"; };
 		016C4DDA1A1D8C630076320F /* spStoreHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = spStoreHeadView.xib; sourceTree = "<group>"; };
 		016C4DDC1A1D8F050076320F /* spStoreHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = spStoreHeadView.h; sourceTree = "<group>"; };
 		016C4DDD1A1D8F050076320F /* spStoreHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = spStoreHeadView.m; sourceTree = "<group>"; };
@@ -219,6 +289,11 @@
 		016C4DE21A1D9AA50076320F /* UIScrollView+SVInfiniteScrolling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SVInfiniteScrolling.m"; sourceTree = "<group>"; };
 		016C4DE31A1D9AA50076320F /* UIScrollView+SVPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SVPullToRefresh.h"; sourceTree = "<group>"; };
 		016C4DE41A1D9AA50076320F /* UIScrollView+SVPullToRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SVPullToRefresh.m"; sourceTree = "<group>"; };
+		01711A131A3480990090C8C7 /* SPTaskBeginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTaskBeginController.h; sourceTree = "<group>"; };
+		01711A141A3480990090C8C7 /* SPTaskBeginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTaskBeginController.m; sourceTree = "<group>"; };
+		01711A151A3480990090C8C7 /* SPTaskBeginController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPTaskBeginController.xib; sourceTree = "<group>"; };
+		017A97B31A32FF6F00FE4182 /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		017A97B41A32FF6F00FE4182 /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		01815EC61A10592600F80EA2 /* SSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychain.h; sourceTree = "<group>"; };
 		01815EC71A10592600F80EA2 /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychain.m; sourceTree = "<group>"; };
 		01815ECB1A10599300F80EA2 /* SPUserData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPUserData.h; sourceTree = "<group>"; };
@@ -244,20 +319,30 @@
 		0185D6DE1A26BDB700B3F37C /* SPExangeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPExangeCell.xib; sourceTree = "<group>"; };
 		0185D6E11A26C16700B3F37C /* SPExangeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPExangeModel.h; sourceTree = "<group>"; };
 		0185D6E21A26C16700B3F37C /* SPExangeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPExangeModel.m; sourceTree = "<group>"; };
-		0185D6E41A26D5B900B3F37C /* SPGamedynamicController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPGamedynamicController.h; sourceTree = "<group>"; };
-		0185D6E51A26D5B900B3F37C /* SPGamedynamicController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPGamedynamicController.m; sourceTree = "<group>"; };
-		0185D6E61A26D5B900B3F37C /* SPGamedynamicController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPGamedynamicController.xib; sourceTree = "<group>"; };
 		0185D6EA1A26DAB000B3F37C /* SPTaskModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTaskModel.h; sourceTree = "<group>"; };
 		0185D6EB1A26DAB000B3F37C /* SPTaskModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTaskModel.m; sourceTree = "<group>"; };
 		0185D6ED1A26FF0D00B3F37C /* SPTaskCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTaskCell.h; sourceTree = "<group>"; };
 		0185D6EE1A26FF0D00B3F37C /* SPTaskCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTaskCell.m; sourceTree = "<group>"; };
 		0185D6EF1A26FF0D00B3F37C /* SPTaskCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPTaskCell.xib; sourceTree = "<group>"; };
-		0185D6F21A27105900B3F37C /* SPPKTaiController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPKTaiController.h; sourceTree = "<group>"; };
-		0185D6F31A27105900B3F37C /* SPPKTaiController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPKTaiController.m; sourceTree = "<group>"; };
-		0185D6F41A27105900B3F37C /* SPPKTaiController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPPKTaiController.xib; sourceTree = "<group>"; };
 		0185D6F71A271E6000B3F37C /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
 		0185D6F81A271E6000B3F37C /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 		0185D6F91A271E6000B3F37C /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		01899FE21A30056900589F7C /* SPGoldRecordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPGoldRecordController.h; sourceTree = "<group>"; };
+		01899FE31A30056900589F7C /* SPGoldRecordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPGoldRecordController.m; sourceTree = "<group>"; };
+		01899FE41A30056900589F7C /* SPGoldRecordController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPGoldRecordController.xib; sourceTree = "<group>"; };
+		01899FE71A30078400589F7C /* SPGoldenRecordModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPGoldenRecordModel.h; sourceTree = "<group>"; };
+		01899FE81A30078400589F7C /* SPGoldenRecordModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPGoldenRecordModel.m; sourceTree = "<group>"; };
+		01899FEA1A30151F00589F7C /* SPGoldenRecordCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPGoldenRecordCell.h; sourceTree = "<group>"; };
+		01899FEB1A30151F00589F7C /* SPGoldenRecordCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPGoldenRecordCell.m; sourceTree = "<group>"; };
+		01899FEC1A30151F00589F7C /* SPGoldenRecordCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPGoldenRecordCell.xib; sourceTree = "<group>"; };
+		01899FEF1A30348800589F7C /* SPEditInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPEditInfoController.h; sourceTree = "<group>"; };
+		01899FF01A30348800589F7C /* SPEditInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPEditInfoController.m; sourceTree = "<group>"; };
+		01899FF11A30348800589F7C /* SPEditInfoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPEditInfoController.xib; sourceTree = "<group>"; };
+		01899FF41A30459800589F7C /* SPModifyInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPModifyInfoController.h; sourceTree = "<group>"; };
+		01899FF51A30459800589F7C /* SPModifyInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPModifyInfoController.m; sourceTree = "<group>"; };
+		01899FF61A30459800589F7C /* SPModifyInfoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPModifyInfoController.xib; sourceTree = "<group>"; };
+		01899FFA1A3065B800589F7C /* SPImageRecordModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPImageRecordModel.h; sourceTree = "<group>"; };
+		01899FFB1A3065B800589F7C /* SPImageRecordModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPImageRecordModel.m; sourceTree = "<group>"; };
 		018E57381A09BA7900BAA18D /* SPTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTaskViewController.h; sourceTree = "<group>"; };
 		018E57391A09BA7900BAA18D /* SPTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTaskViewController.m; sourceTree = "<group>"; };
 		018E573A1A09BA7900BAA18D /* SPTaskViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPTaskViewController.xib; sourceTree = "<group>"; };
@@ -276,6 +361,25 @@
 		019296AE1A1B2A5E00E57C7A /* SPBrandCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPBrandCell.m; sourceTree = "<group>"; };
 		019296B71A1B2CAE00E57C7A /* SPBrandData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPBrandData.h; sourceTree = "<group>"; };
 		019296B81A1B2CAE00E57C7A /* SPBrandData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPBrandData.m; sourceTree = "<group>"; };
+		01932DFF1A2D761100EC3138 /* SPMyAttentionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPMyAttentionController.h; sourceTree = "<group>"; };
+		01932E001A2D761100EC3138 /* SPMyAttentionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPMyAttentionController.m; sourceTree = "<group>"; };
+		01932E011A2D761100EC3138 /* SPMyAttentionController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPMyAttentionController.xib; sourceTree = "<group>"; };
+		01932E041A2D943300EC3138 /* SPFollowCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPFollowCell.h; sourceTree = "<group>"; };
+		01932E051A2D943300EC3138 /* SPFollowCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPFollowCell.m; sourceTree = "<group>"; };
+		01932E061A2D943300EC3138 /* SPFollowCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPFollowCell.xib; sourceTree = "<group>"; };
+		01932E091A2D9DB400EC3138 /* SPDyanmicController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPDyanmicController.h; sourceTree = "<group>"; };
+		01932E0A1A2D9DB400EC3138 /* SPDyanmicController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPDyanmicController.m; sourceTree = "<group>"; };
+		01932E0B1A2D9DB400EC3138 /* SPDyanmicController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPDyanmicController.xib; sourceTree = "<group>"; };
+		01932E0E1A2DA06100EC3138 /* SPDynamicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPDynamicModel.h; sourceTree = "<group>"; };
+		01932E0F1A2DA06100EC3138 /* SPDynamicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPDynamicModel.m; sourceTree = "<group>"; };
+		01932E111A2DAFC600EC3138 /* SPDynamicHasImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPDynamicHasImageCell.h; sourceTree = "<group>"; };
+		01932E121A2DAFC600EC3138 /* SPDynamicHasImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPDynamicHasImageCell.m; sourceTree = "<group>"; };
+		01932E131A2DAFC600EC3138 /* SPDynamicHasImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPDynamicHasImageCell.xib; sourceTree = "<group>"; };
+		01932E161A2DB46E00EC3138 /* SPDynamicNoImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPDynamicNoImageCell.h; sourceTree = "<group>"; };
+		01932E171A2DB46E00EC3138 /* SPDynamicNoImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPDynamicNoImageCell.m; sourceTree = "<group>"; };
+		01932E181A2DB46F00EC3138 /* SPDynamicNoImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPDynamicNoImageCell.xib; sourceTree = "<group>"; };
+		01932E1B1A2DC10600EC3138 /* SPDynamicTableHead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPDynamicTableHead.h; sourceTree = "<group>"; };
+		01932E1C1A2DC10600EC3138 /* SPDynamicTableHead.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPDynamicTableHead.m; sourceTree = "<group>"; };
 		019AB5391A0C5FE90066E3D0 /* SPTaskAdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPTaskAdView.xib; sourceTree = "<group>"; };
 		019AB53B1A0C64890066E3D0 /* SPTaskADView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTaskADView.h; sourceTree = "<group>"; };
 		019AB53C1A0C64890066E3D0 /* SPTaskADView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTaskADView.m; sourceTree = "<group>"; };
@@ -287,6 +391,8 @@
 		01A477A91A2578CA000AF0E9 /* SPPoolCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPoolCell.h; sourceTree = "<group>"; };
 		01A477AA1A2578CA000AF0E9 /* SPPoolCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPoolCell.m; sourceTree = "<group>"; };
 		01A477AB1A2578CA000AF0E9 /* SPPoolCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPPoolCell.xib; sourceTree = "<group>"; };
+		01AE777D1A2D5B8B00915F69 /* SPFansModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPFansModel.h; sourceTree = "<group>"; };
+		01AE777E1A2D5B8B00915F69 /* SPFansModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPFansModel.m; sourceTree = "<group>"; };
 		01B0EFE21A241A510063B143 /* SPMyMessageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPMyMessageController.h; sourceTree = "<group>"; };
 		01B0EFE31A241A510063B143 /* SPMyMessageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPMyMessageController.m; sourceTree = "<group>"; };
 		01B0EFE41A241A510063B143 /* SPMyMessageController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPMyMessageController.xib; sourceTree = "<group>"; };
@@ -353,8 +459,29 @@
 		01ECE0D61A0CAF2D00693595 /* UIView+TKCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TKCategory.m"; sourceTree = "<group>"; };
 		01ECE0DD1A0CB55800693595 /* SPHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPHttpClient.h; sourceTree = "<group>"; };
 		01ECE0DE1A0CB55800693595 /* SPHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPHttpClient.m; sourceTree = "<group>"; };
+		01EE847D1A314FB100BF4A9C /* SPImageRecordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPImageRecordController.h; sourceTree = "<group>"; };
+		01EE847E1A314FB100BF4A9C /* SPImageRecordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPImageRecordController.m; sourceTree = "<group>"; };
+		01EE847F1A314FB100BF4A9C /* SPImageRecordController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPImageRecordController.xib; sourceTree = "<group>"; };
+		01EE84831A3153B500BF4A9C /* SPImageRecordCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPImageRecordCell.h; sourceTree = "<group>"; };
+		01EE84841A3153B500BF4A9C /* SPImageRecordCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPImageRecordCell.m; sourceTree = "<group>"; };
+		01EE84851A3153B500BF4A9C /* SPImageRecordCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPImageRecordCell.xib; sourceTree = "<group>"; };
+		01EE84881A31594100BF4A9C /* SPOpinionBackController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPOpinionBackController.h; sourceTree = "<group>"; };
+		01EE84891A31594100BF4A9C /* SPOpinionBackController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPOpinionBackController.m; sourceTree = "<group>"; };
+		01EE848B1A316B1E00BF4A9C /* SPGuessFingerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPGuessFingerController.h; sourceTree = "<group>"; };
+		01EE848C1A316B1E00BF4A9C /* SPGuessFingerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPGuessFingerController.m; sourceTree = "<group>"; };
+		01EE848D1A316B1E00BF4A9C /* SPGuessFingerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPGuessFingerController.xib; sourceTree = "<group>"; };
+		01EE84901A319FB100BF4A9C /* SPGuessFingerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPGuessFingerModel.h; sourceTree = "<group>"; };
+		01EE84911A319FB100BF4A9C /* SPGuessFingerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPGuessFingerModel.m; sourceTree = "<group>"; };
 		01F10E0B1A280CAE00C6F5FA /* SPTakePhotoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTakePhotoModel.h; sourceTree = "<group>"; };
 		01F10E0C1A280CAE00C6F5FA /* SPTakePhotoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTakePhotoModel.m; sourceTree = "<group>"; };
+		01F10E0E1A28238200C6F5FA /* SPdiscernController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPdiscernController.h; sourceTree = "<group>"; };
+		01F10E0F1A28238200C6F5FA /* SPdiscernController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPdiscernController.m; sourceTree = "<group>"; };
+		01F10E101A28238200C6F5FA /* SPdiscernController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPdiscernController.xib; sourceTree = "<group>"; };
+		01F10E141A28250900C6F5FA /* SPtakeHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPtakeHeadView.h; sourceTree = "<group>"; };
+		01F10E151A28250900C6F5FA /* SPtakeHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPtakeHeadView.m; sourceTree = "<group>"; };
+		01F10E171A28251A00C6F5FA /* SPtakeHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPtakeHeadView.xib; sourceTree = "<group>"; };
+		01F10E1A1A28262B00C6F5FA /* SSTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSTextView.h; sourceTree = "<group>"; };
+		01F10E1B1A28262B00C6F5FA /* SSTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSTextView.m; sourceTree = "<group>"; };
 		01FF28B61A22CC19004A104F /* SPBeanController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPBeanController.h; sourceTree = "<group>"; };
 		01FF28B71A22CC19004A104F /* SPBeanController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPBeanController.m; sourceTree = "<group>"; };
 		01FF28B81A22CC19004A104F /* SPBeanController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPBeanController.xib; sourceTree = "<group>"; };
@@ -415,6 +542,23 @@
 				0185D6D71A26BB0000B3F37C /* SPExangeController.h */,
 				0185D6D81A26BB0000B3F37C /* SPExangeController.m */,
 				0185D6D91A26BB0000B3F37C /* SPExangeController.xib */,
+				016610D81A2C689200B21F7F /* SPFansController.h */,
+				016610D91A2C689200B21F7F /* SPFansController.m */,
+				016610DA1A2C689200B21F7F /* SPFansController.xib */,
+				01932DFF1A2D761100EC3138 /* SPMyAttentionController.h */,
+				01932E001A2D761100EC3138 /* SPMyAttentionController.m */,
+				01932E011A2D761100EC3138 /* SPMyAttentionController.xib */,
+				01932E091A2D9DB400EC3138 /* SPDyanmicController.h */,
+				01932E0A1A2D9DB400EC3138 /* SPDyanmicController.m */,
+				01932E0B1A2D9DB400EC3138 /* SPDyanmicController.xib */,
+				01899FE21A30056900589F7C /* SPGoldRecordController.h */,
+				01899FE31A30056900589F7C /* SPGoldRecordController.m */,
+				01899FE41A30056900589F7C /* SPGoldRecordController.xib */,
+				01EE847D1A314FB100BF4A9C /* SPImageRecordController.h */,
+				01EE847E1A314FB100BF4A9C /* SPImageRecordController.m */,
+				01EE847F1A314FB100BF4A9C /* SPImageRecordController.xib */,
+				01EE84881A31594100BF4A9C /* SPOpinionBackController.h */,
+				01EE84891A31594100BF4A9C /* SPOpinionBackController.m */,
 			);
 			name = UserCenter;
 			sourceTree = "<group>";
@@ -569,6 +713,7 @@
 		014AD4F41A08C57800AC2C96 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				01F10E191A28262B00C6F5FA /* SSToolkit */,
 				018540CD1A1F211B00D93D9D /* ALAssetsLibrary+CustomPhotoAlbum.h */,
 				018540CE1A1F211B00D93D9D /* ALAssetsLibrary+CustomPhotoAlbum.m */,
 				01DE3A981A11B7C0009A88E0 /* UserDefault */,
@@ -603,7 +748,7 @@
 				01BEBBB71A0B25EB007D447F /* CityController */,
 				018E574E1A0A128600BAA18D /* ReSetPasswordViewController */,
 				018E57481A09DA5D00BAA18D /* LoginViewController */,
-				018E57371A09BA2600BAA18D /* TastViewController */,
+				018E57371A09BA2600BAA18D /* TaskViewController */,
 				014D35BC1A08D72E00D86711 /* TabbarController */,
 			);
 			name = ViewControllers;
@@ -612,6 +757,8 @@
 		014D357D1A08CBC900D86711 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				01EE84821A31539200BF4A9C /* Set */,
+				01F10E131A2824D400C6F5FA /* Shanpai */,
 				01A477A81A257856000AF0E9 /* pk */,
 				01B111BC1A1C78BD00ECF6B9 /* StoreCell */,
 				019296AC1A1B29F300E57C7A /* pinPai */,
@@ -697,6 +844,7 @@
 		01815EC91A10595D00F80EA2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				01899FF91A30659500589F7C /* Set */,
 				01F10E0A1A280C9200C6F5FA /* Shanpai */,
 				0185D6E91A26DA9500B3F37C /* Task */,
 				01A477A41A256BD0000AF0E9 /* PK */,
@@ -706,6 +854,8 @@
 				01B111B41A1C2B2C00ECF6B9 /* AdData */,
 				019296B61A1B2C1100E57C7A /* pinPaiData */,
 				01815ECA1A10597100F80EA2 /* userData */,
+				017A97B31A32FF6F00FE4182 /* BaseModel.h */,
+				017A97B41A32FF6F00FE4182 /* BaseModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -743,6 +893,12 @@
 				01FF28CA1A230DE8004A104F /* spBeanModel.m */,
 				0185D6E11A26C16700B3F37C /* SPExangeModel.h */,
 				0185D6E21A26C16700B3F37C /* SPExangeModel.m */,
+				01AE777D1A2D5B8B00915F69 /* SPFansModel.h */,
+				01AE777E1A2D5B8B00915F69 /* SPFansModel.m */,
+				01932E0E1A2DA06100EC3138 /* SPDynamicModel.h */,
+				01932E0F1A2DA06100EC3138 /* SPDynamicModel.m */,
+				01899FE71A30078400589F7C /* SPGoldenRecordModel.h */,
+				01899FE81A30078400589F7C /* SPGoldenRecordModel.m */,
 			);
 			name = UserCenter;
 			sourceTree = "<group>";
@@ -756,14 +912,26 @@
 			name = Task;
 			sourceTree = "<group>";
 		};
-		018E57371A09BA2600BAA18D /* TastViewController */ = {
+		01899FF91A30659500589F7C /* Set */ = {
+			isa = PBXGroup;
+			children = (
+				01899FFA1A3065B800589F7C /* SPImageRecordModel.h */,
+				01899FFB1A3065B800589F7C /* SPImageRecordModel.m */,
+			);
+			name = Set;
+			sourceTree = "<group>";
+		};
+		018E57371A09BA2600BAA18D /* TaskViewController */ = {
 			isa = PBXGroup;
 			children = (
 				018E57381A09BA7900BAA18D /* SPTaskViewController.h */,
 				018E57391A09BA7900BAA18D /* SPTaskViewController.m */,
 				018E573A1A09BA7900BAA18D /* SPTaskViewController.xib */,
+				01711A131A3480990090C8C7 /* SPTaskBeginController.h */,
+				01711A141A3480990090C8C7 /* SPTaskBeginController.m */,
+				01711A151A3480990090C8C7 /* SPTaskBeginController.xib */,
 			);
-			name = TastViewController;
+			name = TaskViewController;
 			sourceTree = "<group>";
 		};
 		018E57431A09CB7D00BAA18D /* ChangeToUserView */ = {
@@ -834,12 +1002,9 @@
 				01A4779F1A256703000AF0E9 /* SPPKPoolController.h */,
 				01A477A01A256703000AF0E9 /* SPPKPoolController.m */,
 				01A477A11A256703000AF0E9 /* SPPKPoolController.xib */,
-				0185D6E41A26D5B900B3F37C /* SPGamedynamicController.h */,
-				0185D6E51A26D5B900B3F37C /* SPGamedynamicController.m */,
-				0185D6E61A26D5B900B3F37C /* SPGamedynamicController.xib */,
-				0185D6F21A27105900B3F37C /* SPPKTaiController.h */,
-				0185D6F31A27105900B3F37C /* SPPKTaiController.m */,
-				0185D6F41A27105900B3F37C /* SPPKTaiController.xib */,
+				01EE848B1A316B1E00BF4A9C /* SPGuessFingerController.h */,
+				01EE848C1A316B1E00BF4A9C /* SPGuessFingerController.m */,
+				01EE848D1A316B1E00BF4A9C /* SPGuessFingerController.xib */,
 			);
 			name = pk;
 			sourceTree = "<group>";
@@ -849,6 +1014,10 @@
 			children = (
 				01A477A51A256BE5000AF0E9 /* SPPoolModel.h */,
 				01A477A61A256BE5000AF0E9 /* SPPoolModel.m */,
+				01627DD51A2EF1E900C189C6 /* SPGameDynamicModel.h */,
+				01627DD61A2EF1EA00C189C6 /* SPGameDynamicModel.m */,
+				01EE84901A319FB100BF4A9C /* SPGuessFingerModel.h */,
+				01EE84911A319FB100BF4A9C /* SPGuessFingerModel.m */,
 			);
 			name = PK;
 			sourceTree = "<group>";
@@ -862,6 +1031,18 @@
 				0185D6F71A271E6000B3F37C /* TableViewCell.h */,
 				0185D6F81A271E6000B3F37C /* TableViewCell.m */,
 				0185D6F91A271E6000B3F37C /* TableViewCell.xib */,
+				01627DCB1A2EBE0400C189C6 /* SPPKView.h */,
+				01627DCC1A2EBE0400C189C6 /* SPPKView.m */,
+				01627DCE1A2EBE4C00C189C6 /* SPPKTaiView.xib */,
+				01627DD01A2EEDE600C189C6 /* SPGameDynamicView.h */,
+				01627DD11A2EEDE600C189C6 /* SPGameDynamicView.m */,
+				01627DD31A2EEE0E00C189C6 /* SPGameDynamic.xib */,
+				01627DD81A2F029C00C189C6 /* SPGameDynamicCell.h */,
+				01627DD91A2F029C00C189C6 /* SPGameDynamicCell.m */,
+				01627DDA1A2F029C00C189C6 /* SPGameDynamicCell.xib */,
+				01627DDD1A2F114D00C189C6 /* SPGameDynamicHeadView.h */,
+				01627DDE1A2F114D00C189C6 /* SPGameDynamicHeadView.m */,
+				01627DE01A2F11F400C189C6 /* SPGameDynamicHeadView.xib */,
 			);
 			name = pk;
 			sourceTree = "<group>";
@@ -954,6 +1135,9 @@
 				01BEBBC91A0B54FA007D447F /* ShanpaiViewController.h */,
 				01BEBBCA1A0B54FA007D447F /* ShanpaiViewController.m */,
 				01BEBBCB1A0B54FA007D447F /* ShanpaiViewController.xib */,
+				01F10E0E1A28238200C6F5FA /* SPdiscernController.h */,
+				01F10E0F1A28238200C6F5FA /* SPdiscernController.m */,
+				01F10E101A28238200C6F5FA /* SPdiscernController.xib */,
 			);
 			name = ShanpaiViewController;
 			sourceTree = "<group>";
@@ -1010,6 +1194,30 @@
 				0185D6DC1A26BDB700B3F37C /* SPExangeCell.h */,
 				0185D6DD1A26BDB700B3F37C /* SPExangeCell.m */,
 				0185D6DE1A26BDB700B3F37C /* SPExangeCell.xib */,
+				016610DD1A2C709900B21F7F /* SPFansCell.h */,
+				016610DE1A2C709900B21F7F /* SPFansCell.m */,
+				016610DF1A2C709900B21F7F /* SPFansCell.xib */,
+				01932E041A2D943300EC3138 /* SPFollowCell.h */,
+				01932E051A2D943300EC3138 /* SPFollowCell.m */,
+				01932E061A2D943300EC3138 /* SPFollowCell.xib */,
+				01932E111A2DAFC600EC3138 /* SPDynamicHasImageCell.h */,
+				01932E121A2DAFC600EC3138 /* SPDynamicHasImageCell.m */,
+				01932E131A2DAFC600EC3138 /* SPDynamicHasImageCell.xib */,
+				01932E161A2DB46E00EC3138 /* SPDynamicNoImageCell.h */,
+				01932E171A2DB46E00EC3138 /* SPDynamicNoImageCell.m */,
+				01932E181A2DB46F00EC3138 /* SPDynamicNoImageCell.xib */,
+				01932E1B1A2DC10600EC3138 /* SPDynamicTableHead.h */,
+				01932E1C1A2DC10600EC3138 /* SPDynamicTableHead.m */,
+				01627DC91A2EA37300C189C6 /* SPDynamicHead.xib */,
+				01899FEA1A30151F00589F7C /* SPGoldenRecordCell.h */,
+				01899FEB1A30151F00589F7C /* SPGoldenRecordCell.m */,
+				01899FEC1A30151F00589F7C /* SPGoldenRecordCell.xib */,
+				01899FEF1A30348800589F7C /* SPEditInfoController.h */,
+				01899FF01A30348800589F7C /* SPEditInfoController.m */,
+				01899FF11A30348800589F7C /* SPEditInfoController.xib */,
+				01899FF41A30459800589F7C /* SPModifyInfoController.h */,
+				01899FF51A30459800589F7C /* SPModifyInfoController.m */,
+				01899FF61A30459800589F7C /* SPModifyInfoController.xib */,
 			);
 			name = UserCenter;
 			sourceTree = "<group>";
@@ -1060,6 +1268,16 @@
 			name = HttpRequest;
 			sourceTree = "<group>";
 		};
+		01EE84821A31539200BF4A9C /* Set */ = {
+			isa = PBXGroup;
+			children = (
+				01EE84831A3153B500BF4A9C /* SPImageRecordCell.h */,
+				01EE84841A3153B500BF4A9C /* SPImageRecordCell.m */,
+				01EE84851A3153B500BF4A9C /* SPImageRecordCell.xib */,
+			);
+			name = Set;
+			sourceTree = "<group>";
+		};
 		01F10E0A1A280C9200C6F5FA /* Shanpai */ = {
 			isa = PBXGroup;
 			children = (
@@ -1067,6 +1285,25 @@
 				01F10E0C1A280CAE00C6F5FA /* SPTakePhotoModel.m */,
 			);
 			name = Shanpai;
+			sourceTree = "<group>";
+		};
+		01F10E131A2824D400C6F5FA /* Shanpai */ = {
+			isa = PBXGroup;
+			children = (
+				01F10E141A28250900C6F5FA /* SPtakeHeadView.h */,
+				01F10E151A28250900C6F5FA /* SPtakeHeadView.m */,
+				01F10E171A28251A00C6F5FA /* SPtakeHeadView.xib */,
+			);
+			name = Shanpai;
+			sourceTree = "<group>";
+		};
+		01F10E191A28262B00C6F5FA /* SSToolkit */ = {
+			isa = PBXGroup;
+			children = (
+				01F10E1A1A28262B00C6F5FA /* SSTextView.h */,
+				01F10E1B1A28262B00C6F5FA /* SSTextView.m */,
+			);
+			path = SSToolkit;
 			sourceTree = "<group>";
 		};
 		E5B28ACD2FF04625A2303592 /* Frameworks */ = {
@@ -1169,32 +1406,49 @@
 			buildActionMask = 2147483647;
 			files = (
 				014AD4D51A08C4DC00AC2C96 /* Main.storyboard in Resources */,
+				01899FF81A30459800589F7C /* SPModifyInfoController.xib in Resources */,
 				01BEBBDD1A0B6864007D447F /* SPStroeViewController.xib in Resources */,
 				01FF28BA1A22CC19004A104F /* SPBeanController.xib in Resources */,
 				014AD4D71A08C4DC00AC2C96 /* Images.xcassets in Resources */,
 				018E574D1A09DB0000BAA18D /* SPLoginViewController.xib in Resources */,
+				01932E1A1A2DB46F00EC3138 /* SPDynamicNoImageCell.xib in Resources */,
+				01EE84871A3153B500BF4A9C /* SPImageRecordCell.xib in Resources */,
 				018E57421A09C9AF00BAA18D /* SPChangeToUser.xib in Resources */,
 				01B0EFFC1A2482E40063B143 /* SPSetController.xib in Resources */,
 				01B0EFE61A241A510063B143 /* SPMyMessageController.xib in Resources */,
 				01327EF61A1B6C2D008467B6 /* SVWebViewControllerActivityChrome-iPad@2x.png in Resources */,
 				01B0EFF41A2463720063B143 /* SPMessageController.xib in Resources */,
-				0185D6E81A26D5B900B3F37C /* SPGamedynamicController.xib in Resources */,
 				01D54B191A13042B007A4DBB /* SPUserCenterView.xib in Resources */,
+				01EE84811A314FB100BF4A9C /* SPImageRecordController.xib in Resources */,
+				01711A171A3480990090C8C7 /* SPTaskBeginController.xib in Resources */,
 				01BEBBCD1A0B54FA007D447F /* ShanpaiViewController.xib in Resources */,
 				01B111C61A1C939C00ECF6B9 /* SPExchangeController.xib in Resources */,
+				01932E151A2DAFC600EC3138 /* SPDynamicHasImageCell.xib in Resources */,
+				01627DDC1A2F029C00C189C6 /* SPGameDynamicCell.xib in Resources */,
 				01327EF31A1B6C2D008467B6 /* SVWebViewController.bundle in Resources */,
+				01899FEE1A30151F00589F7C /* SPGoldenRecordCell.xib in Resources */,
+				01932E031A2D761100EC3138 /* SPMyAttentionController.xib in Resources */,
+				01F10E181A28251A00C6F5FA /* SPtakeHeadView.xib in Resources */,
 				018540D51A1F3FC200D93D9D /* LaunchScreen.xib in Resources */,
+				01932E081A2D943300EC3138 /* SPFollowCell.xib in Resources */,
+				01899FF31A30348800589F7C /* SPEditInfoController.xib in Resources */,
 				01A477A31A256703000AF0E9 /* SPPKPoolController.xib in Resources */,
 				01327ED01A1B653D008467B6 /* pinPaiCell.xib in Resources */,
 				01BEBBBC1A0B260D007D447F /* SPCityViewController.xib in Resources */,
+				016610DC1A2C689200B21F7F /* SPFansController.xib in Resources */,
 				0185D6F11A26FF0D00B3F37C /* SPTaskCell.xib in Resources */,
+				01F10E121A28238200C6F5FA /* SPdiscernController.xib in Resources */,
 				0191D0131A0B0CEB00FAE08F /* Default-568h@2x.png in Resources */,
 				01FF28BF1A22D464004A104F /* SPBeanHeadView.xib in Resources */,
 				01327EF51A1B6C2D008467B6 /* SVWebViewControllerActivityChrome-iPad.png in Resources */,
+				01627DCF1A2EBE4C00C189C6 /* SPPKTaiView.xib in Resources */,
 				01327EF81A1B6C2D008467B6 /* SVWebViewControllerActivityChrome@2x.png in Resources */,
+				01627DD41A2EEE0E00C189C6 /* SPGameDynamic.xib in Resources */,
 				018E573C1A09BA7900BAA18D /* SPTaskViewController.xib in Resources */,
+				01627DCA1A2EA37300C189C6 /* SPDynamicHead.xib in Resources */,
 				0185D6E01A26BDB700B3F37C /* SPExangeCell.xib in Resources */,
 				011EBEFB1A11FE440050D22B /* SPUserViewController.xib in Resources */,
+				01627DE11A2F11F400C189C6 /* SPGameDynamicHeadView.xib in Resources */,
 				01A477AD1A2578CA000AF0E9 /* SPPoolCell.xib in Resources */,
 				01327EF91A1B6C2D008467B6 /* SVWebViewControllerActivitySafari-iPad.png in Resources */,
 				01327EF11A1B6C2D008467B6 /* SVWebViewController.strings in Resources */,
@@ -1202,16 +1456,19 @@
 				0185D6FB1A271E6000B3F37C /* TableViewCell.xib in Resources */,
 				01DE3AA71A11EF00009A88E0 /* SVProgressHUD.bundle in Resources */,
 				01BEBBC21A0B4AF3007D447F /* SPPKViewController.xib in Resources */,
+				01899FE61A30056900589F7C /* SPGoldRecordController.xib in Resources */,
 				019AB53A1A0C5FE90066E3D0 /* SPTaskAdView.xib in Resources */,
+				01932E0D1A2D9DB400EC3138 /* SPDyanmicController.xib in Resources */,
+				01EE848F1A316B1E00BF4A9C /* SPGuessFingerController.xib in Resources */,
 				01327EFC1A1B6C2D008467B6 /* SVWebViewControllerActivitySafari@2x.png in Resources */,
 				01B0EFEF1A243C950063B143 /* SPMessageCell.xib in Resources */,
 				016C4DDB1A1D8C630076320F /* spStoreHeadView.xib in Resources */,
+				016610E11A2C709900B21F7F /* SPFansCell.xib in Resources */,
 				018540D41A1F30F900D93D9D /* SPjindouCell.xib in Resources */,
 				01BEBBD71A0B658E007D447F /* SPPinpaiViewController.xib in Resources */,
 				01327EFF1A1B75A6008467B6 /* SPAdView.xib in Resources */,
 				018E57581A0A20FD00BAA18D /* SPReSetViewController.xib in Resources */,
 				0185D6DB1A26BB0000B3F37C /* SPExangeController.xib in Resources */,
-				0185D6F61A27105900B3F37C /* SPPKTaiController.xib in Resources */,
 				01327EFA1A1B6C2D008467B6 /* SVWebViewControllerActivitySafari-iPad@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1265,26 +1522,35 @@
 			files = (
 				018E573B1A09BA7900BAA18D /* SPTaskViewController.m in Sources */,
 				014AD4F81A08C5B900AC2C96 /* HexColor.m in Sources */,
+				01627DD71A2EF1EA00C189C6 /* SPGameDynamicModel.m in Sources */,
 				01ECE0D91A0CAF2D00693595 /* TKProgressBarView.m in Sources */,
 				01ECE0D71A0CAF2D00693595 /* TKAlertCenter.m in Sources */,
 				01B0EFEA1A2427DC0063B143 /* SPMessageModel.m in Sources */,
 				01327EF71A1B6C2D008467B6 /* SVWebViewControllerActivityChrome.m in Sources */,
 				018540D31A1F30F900D93D9D /* SPjindouCell.m in Sources */,
+				01932E071A2D943300EC3138 /* SPFollowCell.m in Sources */,
+				01932E021A2D761100EC3138 /* SPMyAttentionController.m in Sources */,
 				01B0EFFB1A2482E40063B143 /* SPSetController.m in Sources */,
 				019296B91A1B2CAE00E57C7A /* SPBrandData.m in Sources */,
 				018540CC1A1EF68F00D93D9D /* SPUserCenterData.m in Sources */,
+				01EE848A1A31594100BF4A9C /* SPOpinionBackController.m in Sources */,
 				014D35841A08CDA900D86711 /* UIView+AutoLayout.m in Sources */,
 				01FF28C81A230881004A104F /* getFriendListVC.m in Sources */,
 				01BEBBBB1A0B260D007D447F /* SPCityViewController.m in Sources */,
 				01327F061A1B904B008467B6 /* SwipeView.m in Sources */,
 				01A477AC1A2578CA000AF0E9 /* SPPoolCell.m in Sources */,
+				01932E141A2DAFC600EC3138 /* SPDynamicHasImageCell.m in Sources */,
 				011EBEFA1A11FE440050D22B /* SPUserViewController.m in Sources */,
+				01EE848E1A316B1E00BF4A9C /* SPGuessFingerController.m in Sources */,
 				01327F021A1B7947008467B6 /* SPAdView.m in Sources */,
 				01815ED71A109E2E00F80EA2 /* SPCityData.m in Sources */,
+				01932E191A2DB46F00EC3138 /* SPDynamicNoImageCell.m in Sources */,
 				01FF28C21A2307B2004A104F /* GetFriendModel.m in Sources */,
+				01F10E1C1A28262B00C6F5FA /* SSTextView.m in Sources */,
 				01327EFB1A1B6C2D008467B6 /* SVWebViewControllerActivitySafari.m in Sources */,
-				0185D6F51A27105900B3F37C /* SPPKTaiController.m in Sources */,
+				01627DDF1A2F114D00C189C6 /* SPGameDynamicHeadView.m in Sources */,
 				018E57571A0A20FD00BAA18D /* SPReSetViewController.m in Sources */,
+				01627DD21A2EEDE600C189C6 /* SPGameDynamicView.m in Sources */,
 				01815ECD1A10599300F80EA2 /* SPUserData.m in Sources */,
 				018E574C1A09DB0000BAA18D /* SPLoginViewController.m in Sources */,
 				0185D6DF1A26BDB700B3F37C /* SPExangeCell.m in Sources */,
@@ -1299,35 +1565,51 @@
 				01B0EFF31A2463720063B143 /* SPMessageController.m in Sources */,
 				01ECE0DF1A0CB55800693595 /* SPHttpClient.m in Sources */,
 				01B111C01A1C791400ECF6B9 /* SpStoreViewCell.m in Sources */,
+				01EE84921A319FB100BF4A9C /* SPGuessFingerModel.m in Sources */,
 				01BEBBCC1A0B54FA007D447F /* ShanpaiViewController.m in Sources */,
 				01B111BB1A1C6F0700ECF6B9 /* SPStroeSData.m in Sources */,
 				016C4DDE1A1D8F050076320F /* spStoreHeadView.m in Sources */,
+				016610DB1A2C689200B21F7F /* SPFansController.m in Sources */,
 				014D358D1A08CEC600D86711 /* NSString+File.m in Sources */,
 				01B111B71A1C2B4400ECF6B9 /* SPAdData.m in Sources */,
+				01EE84801A314FB100BF4A9C /* SPImageRecordController.m in Sources */,
 				0185D6EC1A26DAB000B3F37C /* SPTaskModel.m in Sources */,
+				017A97B51A32FF6F00FE4182 /* BaseModel.m in Sources */,
 				01A477A21A256703000AF0E9 /* SPPKPoolController.m in Sources */,
+				01932E0C1A2D9DB400EC3138 /* SPDyanmicController.m in Sources */,
 				014AD4CF1A08C4DC00AC2C96 /* AppDelegate.m in Sources */,
 				01DE3AA81A11EF00009A88E0 /* SVProgressHUD.m in Sources */,
+				01932E101A2DA06100EC3138 /* SPDynamicModel.m in Sources */,
 				014D35BF1A08D75400D86711 /* SPTableViewController.m in Sources */,
 				018E57461A09CBA600BAA18D /* BLChangeToUserView.m in Sources */,
 				0185D6F01A26FF0D00B3F37C /* SPTaskCell.m in Sources */,
+				01EE84861A3153B500BF4A9C /* SPImageRecordCell.m in Sources */,
 				01F10E0D1A280CAE00C6F5FA /* SPTakePhotoModel.m in Sources */,
 				01A477A71A256BE5000AF0E9 /* SPPoolModel.m in Sources */,
+				01AE777F1A2D5B8B00915F69 /* SPFansModel.m in Sources */,
+				01F10E111A28238200C6F5FA /* SPdiscernController.m in Sources */,
 				01B0EFEE1A243C950063B143 /* SPMessageCell.m in Sources */,
 				01BEBBD61A0B658E007D447F /* SPPinpaiViewController.m in Sources */,
 				01ECE0DB1A0CAF2D00693595 /* UIView+TKCategory.m in Sources */,
 				019AB53D1A0C64890066E3D0 /* SPTaskADView.m in Sources */,
+				01899FF71A30459800589F7C /* SPModifyInfoController.m in Sources */,
 				018540CF1A1F211B00D93D9D /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */,
-				0185D6E71A26D5B900B3F37C /* SPGamedynamicController.m in Sources */,
 				01BEBBC11A0B4AF3007D447F /* SPPKViewController.m in Sources */,
 				01BEBBD11A0B6391007D447F /* UIImage+BLCategory.m in Sources */,
 				016C4DE51A1D9AA50076320F /* UIScrollView+SVInfiniteScrolling.m in Sources */,
+				01711A161A3480990090C8C7 /* SPTaskBeginController.m in Sources */,
 				01815ED41A1069E600F80EA2 /* UIDevice-Hardware.m in Sources */,
 				01ECE0DA1A0CAF2D00693595 /* TKProgressCircleView.m in Sources */,
+				01932E1D1A2DC10600EC3138 /* SPDynamicTableHead.m in Sources */,
+				01627DCD1A2EBE0400C189C6 /* SPPKView.m in Sources */,
+				01899FF21A30348800589F7C /* SPEditInfoController.m in Sources */,
+				01899FE51A30056900589F7C /* SPGoldRecordController.m in Sources */,
 				01327EF21A1B6C2D008467B6 /* SVModalWebViewController.m in Sources */,
 				01BEBBDC1A0B6864007D447F /* SPStroeViewController.m in Sources */,
+				01F10E161A28250900C6F5FA /* SPtakeHeadView.m in Sources */,
 				01815ED31A1069E600F80EA2 /* Device.m in Sources */,
 				01327EFD1A1B6C2D008467B6 /* SVWebViewControllerActivity.m in Sources */,
+				01627DDB1A2F029C00C189C6 /* SPGameDynamicCell.m in Sources */,
 				014AD4F31A08C52000AC2C96 /* SPBaseViewController.m in Sources */,
 				01327EF41A1B6C2D008467B6 /* SVWebViewController.m in Sources */,
 				01ECE0D81A0CAF2D00693595 /* TKGlobal.m in Sources */,
@@ -1336,12 +1618,16 @@
 				01B0EFF71A246B070063B143 /* SPPKMesageModel.m in Sources */,
 				014D35871A08CDF400D86711 /* SPTabbarView.m in Sources */,
 				01D54B171A130348007A4DBB /* SPUserCenterHeadView.m in Sources */,
+				01899FED1A30151F00589F7C /* SPGoldenRecordCell.m in Sources */,
 				019296B01A1B2A5E00E57C7A /* SPBrandCell.m in Sources */,
 				01DE3A9B1A11B7DB009A88E0 /* SPUserDefault.m in Sources */,
 				01815EC81A10592600F80EA2 /* SSKeychain.m in Sources */,
+				016610E01A2C709900B21F7F /* SPFansCell.m in Sources */,
 				01FF28C51A230808004A104F /* getFriendCell.m in Sources */,
 				01FF28CB1A230DE8004A104F /* spBeanModel.m in Sources */,
 				0185D6E31A26C16700B3F37C /* SPExangeModel.m in Sources */,
+				01899FFC1A3065B800589F7C /* SPImageRecordModel.m in Sources */,
+				01899FE91A30078400589F7C /* SPGoldenRecordModel.m in Sources */,
 				014AD4CC1A08C4DC00AC2C96 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -27,6 +27,7 @@
         self.credits   = SPFormatstring(dictionary[@"credits"]);
         self.eid       = SPFormatstring(dictionary[@"eid"]);
         self.exchange_time = dictionary[@"exchange_time"];
+        self.exchanged = SPFormatstring(dictionary[@"exchanged"]);
         self._id       = SPFormatstring(dictionary[@"id"]);
         self.image     = dictionary[@"image"];
         self.key       = dictionary[@"key"];

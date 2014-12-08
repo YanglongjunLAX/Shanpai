@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SPDynamicTableHead">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZVf-e9-ivi">
+                    <rect key="frame" x="15" y="10" width="60" height="580"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="D26-7s-Idw"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDc-Tn-aSg">
+                    <rect key="frame" x="85" y="15" width="43" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwU-Xq-bu4">
+                    <rect key="frame" x="85" y="560" width="60" height="30"/>
+                    <state key="normal" title="取消关注">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zdq-ZY-GRa">
+                    <rect key="frame" x="195" y="560" width="75" height="30"/>
+                    <state key="normal" title="修改备注名">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="dwU-Xq-bu4" secondAttribute="bottom" constant="10" id="3iL-z7-D7V"/>
+                <constraint firstItem="dwU-Xq-bu4" firstAttribute="bottom" secondItem="zdq-ZY-GRa" secondAttribute="bottom" id="9iJ-xh-7v0"/>
+                <constraint firstItem="ZVf-e9-ivi" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="DtR-ot-T19"/>
+                <constraint firstAttribute="bottom" secondItem="ZVf-e9-ivi" secondAttribute="bottom" constant="10" id="O7Z-oM-4bH"/>
+                <constraint firstItem="fDc-Tn-aSg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="SDK-m0-JvN"/>
+                <constraint firstItem="fDc-Tn-aSg" firstAttribute="leading" secondItem="ZVf-e9-ivi" secondAttribute="trailing" constant="10" id="dhk-zM-9R9"/>
+                <constraint firstItem="zdq-ZY-GRa" firstAttribute="leading" secondItem="dwU-Xq-bu4" secondAttribute="trailing" constant="50" id="ls3-xV-kKz"/>
+                <constraint firstItem="dwU-Xq-bu4" firstAttribute="leading" secondItem="ZVf-e9-ivi" secondAttribute="trailing" constant="10" id="nbt-CA-RZH"/>
+                <constraint firstItem="ZVf-e9-ivi" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="xM3-e3-uz6"/>
+            </constraints>
+            <connections>
+                <outlet property="imageView" destination="ZVf-e9-ivi" id="F7r-bC-BFC"/>
+                <outlet property="modifyNickName" destination="zdq-ZY-GRa" id="gBo-bS-sW7"/>
+                <outlet property="nameLabel" destination="fDc-Tn-aSg" id="t6w-IM-f9P"/>
+                <outlet property="releationButton" destination="dwU-Xq-bu4" id="6lM-hP-EEW"/>
+            </connections>
+            <point key="canvasLocation" x="197" y="157"/>
+        </view>
+    </objects>
+</document>

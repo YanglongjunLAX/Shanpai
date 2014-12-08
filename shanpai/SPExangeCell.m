@@ -20,6 +20,7 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    [self bringSubviewToFront:self.sendTagImageView];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -35,10 +36,10 @@
     {
         self.exangeNAme.text = self.model.title;
         [self.exangeImageView setImageWithURL:[NSURL URLWithString:self.model.image]];
-        NSString *sendName = @"member_record_shop_nosend@2x.png";
+        NSString *sendName = @"member_record_shop_nosend";
         if ([self.model.exchanged  isEqualToString:@"1"])
         {
-            sendName = @"member_record_shop_send@2x.png";
+            sendName = @"member_record_shop_send";
         }
         self.sendTagImageView.image = [UIImage imageNamed:sendName];
         self.exangeTime.text = self.model.create_time;

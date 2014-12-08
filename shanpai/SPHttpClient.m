@@ -20,8 +20,16 @@
     {
         [string appendString:URLString];
     }
+    
+    NSMutableDictionary *mp = [[NSMutableDictionary alloc] initWithDictionary:parameters];
+    mp[@"ukey"] = kForHttpPassword;//http请求api秘钥
+    if (ISLogined)
+    {
+        mp[@"userid"] = [SPUserData userID];
+    }
+    
     return [super GET:string
-           parameters:parameters
+           parameters:mp
               success:success
               failure:failure];
 }
@@ -39,6 +47,10 @@
     
     NSMutableDictionary *mp = [[NSMutableDictionary alloc] initWithDictionary:parameters];
     mp[@"ukey"] = kForHttpPassword;//http请求api秘钥
+    if (ISLogined)
+    {
+        mp[@"userid"] = [SPUserData userID];
+    }
     
     return [super POST:string parameters:mp success:success failure:failure];
 }

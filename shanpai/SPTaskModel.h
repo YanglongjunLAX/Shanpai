@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BaseModel.h"
 
-@interface SPTaskModel : NSObject
+@interface SPTaskModel : BaseModel
 /*!
  *  任务model
  */
@@ -32,7 +33,6 @@
 @property (nonatomic, copy) NSString *top_time;
 @property (nonatomic, copy) NSString *virtual_hits;
 
-- (id)initWithDictionary:(NSDictionary *)dictionary;
 /*!
  *  获取任务的表格数组
  *

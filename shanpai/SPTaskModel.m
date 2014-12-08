@@ -22,33 +22,6 @@
 
 @implementation SPTaskModel
 
-- (id)initWithDictionary:(NSDictionary *)dictionary
-{
-    self = [super init];
-    if (self)
-    {
-        self.auto_id = SPFormatstring(dictionary[@"auto_id"]);
-        self.city    = SPFormatstring(dictionary[@"city"]);
-        self.cityid  = SPFormatstring(dictionary[@"cityid"]);
-        self.created = dictionary[@"created"];
-        self._description = dictionary[@"description"];
-        self._id     = dictionary[@"id"];
-        self.image   = dictionary[@"image"];
-        self.intro   = dictionary[@"intro"];
-        self.link    = dictionary[@"link"];
-        self.listorder = dictionary[@"listorder"];
-        self.module    = dictionary[@"module"];
-        self.newtitle  = dictionary[@"newtitle"];
-        self.number    = SPFormatstring(dictionary[@"number"]);
-        self.opentype  = dictionary[@"opentype"];
-        self.start_date = SPFormatstring(dictionary[@"start_date"]);
-        self.status    = SPFormatstring(dictionary[@"status"]);
-        self.top_time  = SPFormatstring(@"top_time");
-        self.virtual_hits = SPFormatstring(dictionary[@"virtual_hits"]);
-    }
-    return self;
-}
-
 + (NSArray *)sptConvertFromArray:(NSArray *)array
 {
     NSMutableArray *result = [[NSMutableArray alloc] init];

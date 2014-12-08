@@ -10,6 +10,7 @@
 #import "ALAssetsLibrary+CustomPhotoAlbum.h"
 #import "SPTakePhotoModel.h"
 #import "SVModalWebViewController.h"
+#import "SPdiscernController.h"
 
 @interface ShanpaiViewController ()<UITableViewDelegate,UITableViewDataSource,UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -137,6 +138,16 @@
                 
             }];
         }
+        else//从相册设置 方便模拟器测试
+        {
+            UIImagePickerController * picker = [[UIImagePickerController alloc] init];
+            picker.delegate = self;
+            picker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+            picker.allowsEditing = YES;
+            [self presentViewController:picker animated:YES completion:^{
+                
+            }];
+        }
     }
 }
 
@@ -148,11 +159,6 @@
 //        [SVProgressHUD show];
         UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
         
-        //保存照片到百灵闪拍相册中
-        ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
-        [library saveImage:image toAlbum:kForAppName withCompletionBlock:^(NSError *error) {
-            
-        }];
         weakSelf.sourceImage = image;
         [self performSelector:@selector(upLoadImage)
                    withObject:nil
@@ -162,11 +168,15 @@
 
 - (void)upLoadImage
 {
-    [SPTakePhotoModel updateImage:self.sourceImage block:^(NSArray *array, NSError *error) {
+    [SPTakePhotoModel updateImage:self.sourceImage block:^(NSDictionary *info, NSError *error) {
+        NSArray *array = info[@"data"];
         //识别不成功
-        if (error || array == nil)
+        if (error || array == nil || array.count < 1)
         {
-            
+            SPdiscernController *viewController = [[SPdiscernController alloc] init];
+            viewController.image = self.sourceImage;
+            viewController.itemID = info[@"id"];
+            [self.navigationController pushViewController:viewController animated:YES];
         }
         else
         {

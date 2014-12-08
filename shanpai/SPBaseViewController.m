@@ -261,6 +261,24 @@ static NSString *ncityName = @"广州";
     }
 }
 
+- (void)configRightItemWithImage:(NSString*)image action:(SEL)action
+{
+    if (self.navigationItem)
+    {
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, kForNavItemWidth, kForNavItemHight)];
+        
+        [button setImage:[UIImage imageNamed:image] forState:UIControlStateNormal];
+        
+        if (action)
+        {
+            [button addTarget:self
+                       action:action
+             forControlEvents:UIControlEventTouchUpInside];
+        }
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
+    }
+}
+
 - (void)showTipMessage:(NSString *)message
 {
     [[TKAlertCenter defaultCenter] postAlertWithMessage:message];

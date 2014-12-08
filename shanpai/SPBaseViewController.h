@@ -44,6 +44,13 @@
  */
 - (void)configRightItemWithTitle:(NSString*)title action:(SEL)action;
 /*!
+ *  初始化导航栏右边按钮
+ *
+ *  @param image  图片
+ *  @param action 回调函数
+ */
+- (void)configRightItemWithImage:(NSString*)image action:(SEL)action;
+/*!
  *  提示信息
  *
  *  @param message 信息

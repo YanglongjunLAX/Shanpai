@@ -4,8 +4,9 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SPGamedynamicController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SPdiscernController">
             <connections>
+                <outlet property="tableView" destination="uF4-GL-KFF" id="nza-6b-LJK"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,17 +15,17 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="GOK-Ag-zRi">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="uF4-GL-KFF">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="GOK-Ag-zRi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Fqe-wb-dU8"/>
-                <constraint firstAttribute="bottom" secondItem="GOK-Ag-zRi" secondAttribute="bottom" id="PlD-ms-9JD"/>
-                <constraint firstItem="GOK-Ag-zRi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Th9-pT-egP"/>
-                <constraint firstAttribute="trailing" secondItem="GOK-Ag-zRi" secondAttribute="trailing" id="jc6-r9-SE2"/>
+                <constraint firstAttribute="bottom" secondItem="uF4-GL-KFF" secondAttribute="bottom" id="Cya-5P-Fsu"/>
+                <constraint firstItem="uF4-GL-KFF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="IEf-Kz-LVb"/>
+                <constraint firstAttribute="trailing" secondItem="uF4-GL-KFF" secondAttribute="trailing" id="b8y-W9-g8V"/>
+                <constraint firstItem="uF4-GL-KFF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="iai-jb-2W5"/>
             </constraints>
         </view>
     </objects>

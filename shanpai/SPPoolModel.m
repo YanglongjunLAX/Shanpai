@@ -40,16 +40,15 @@
                          @"userid" : [SPUserData userID],
                          };
     
-    [SVProgressHUD show];
     [[SPHttpClient manager] GET:path
                      parameters:params
                         success:^(AFHTTPRequestOperation *operation, id responseObject) {
-                            NSLog(@"%@",responseObject);
                             NSArray *resArray = [SPPoolModel sppConvertFromArray:responseObject[@"data"]];
                             if (block)
                             {
                                 block(resArray,nil);
                             }
+                            
                             dispatch_async(dispatch_get_main_queue(), ^{
                                 [SVProgressHUD showSuccessWithStatus:responseObject[@"info"]];
                             });

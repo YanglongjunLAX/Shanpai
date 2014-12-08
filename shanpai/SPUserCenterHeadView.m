@@ -49,6 +49,14 @@
     [self.userHeadView addTarget:self
                           action:@selector(changeHead:)
                 forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.funsBtn addTarget:self
+                     action:@selector(funcsCall:)
+           forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.attentionBtn addTarget:self
+                          action:@selector(attentCall:)
+                forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)didMoveToSuperview

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SPtakeHeadView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="亲，这个照片无法识别，请上传到我们的图像库里，可以获得50金豆哦！" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="560" translatesAutoresizingMaskIntoConstraints="NO" id="F9N-gq-shy">
+                    <rect key="frame" x="20" y="230" width="560" height="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ScL-5b-o2r" customClass="SSTextView">
+                    <rect key="frame" x="20" y="260" width="570" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="meV-Gc-Xaa"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yO1-if-1uc">
+                    <rect key="frame" x="494" y="330" width="86" height="28"/>
+                    <state key="normal" title="不想上传" backgroundImage="ad_btn_nosend">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ubX-YQ-LRy">
+                    <rect key="frame" x="20" y="330" width="87" height="28"/>
+                    <state key="normal" title="我要上传" backgroundImage="ad_btn_send">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lhr-HT-RPY">
+                    <rect key="frame" x="20" y="20" width="560" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="UZ1-zT-bto"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="F9N-gq-shy" secondAttribute="trailing" constant="20" id="4wH-zf-ozf"/>
+                <constraint firstItem="ubX-YQ-LRy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="6A8-Vh-Egz"/>
+                <constraint firstItem="F9N-gq-shy" firstAttribute="leading" secondItem="ScL-5b-o2r" secondAttribute="leading" id="Bye-1S-rwf"/>
+                <constraint firstItem="F9N-gq-shy" firstAttribute="top" secondItem="Lhr-HT-RPY" secondAttribute="bottom" constant="10" id="FQD-Sn-hiU"/>
+                <constraint firstItem="ubX-YQ-LRy" firstAttribute="top" secondItem="ScL-5b-o2r" secondAttribute="bottom" constant="20" id="La6-60-JLb"/>
+                <constraint firstItem="Lhr-HT-RPY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="O8B-m5-yhX"/>
+                <constraint firstAttribute="trailing" secondItem="ScL-5b-o2r" secondAttribute="trailing" constant="10" id="Xkl-2x-W5D"/>
+                <constraint firstItem="ScL-5b-o2r" firstAttribute="top" secondItem="F9N-gq-shy" secondAttribute="bottom" constant="10" id="aQj-W7-qhh"/>
+                <constraint firstItem="Lhr-HT-RPY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="dsl-rN-iq6"/>
+                <constraint firstAttribute="trailing" secondItem="yO1-if-1uc" secondAttribute="trailing" constant="20" id="iNL-OK-JkT"/>
+                <constraint firstItem="ubX-YQ-LRy" firstAttribute="top" secondItem="yO1-if-1uc" secondAttribute="top" id="pvg-Pu-DmS"/>
+                <constraint firstItem="Lhr-HT-RPY" firstAttribute="leading" secondItem="F9N-gq-shy" secondAttribute="leading" id="suz-B4-a74"/>
+                <constraint firstAttribute="trailing" secondItem="Lhr-HT-RPY" secondAttribute="trailing" constant="20" id="wWp-KH-AE9"/>
+            </constraints>
+            <connections>
+                <outlet property="imageView" destination="Lhr-HT-RPY" id="lPp-Vp-kAR"/>
+                <outlet property="noSendButton" destination="yO1-if-1uc" id="62Z-0T-BUK"/>
+                <outlet property="sendButton" destination="ubX-YQ-LRy" id="S4R-9c-qzD"/>
+                <outlet property="textView" destination="ScL-5b-o2r" id="5x4-Ft-X6x"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="ad_btn_nosend" width="86" height="28"/>
+        <image name="ad_btn_send" width="87" height="28"/>
+    </resources>
+</document>

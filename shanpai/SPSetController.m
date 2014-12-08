@@ -8,6 +8,8 @@
 
 #import "SPSetController.h"
 #import "SVModalWebViewController.h"
+#import "SPImageRecordController.h"
+#import "SPOpinionBackController.h"
 
 @interface SPSetController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -78,6 +80,8 @@
         {
             case 0:
             {
+                SPImageRecordController *imageRecordVC = [[SPImageRecordController alloc] init];
+                [self.navigationController pushViewController:imageRecordVC animated:YES];
                 break;
             }
             case 1:
@@ -92,8 +96,10 @@
     {
         switch (indexPath.row)
         {
-            case 0:
+            case 0://意见反馈
             {
+                SPOpinionBackController  *opionVC = [[SPOpinionBackController alloc] init];
+                [self.navigationController pushViewController:opionVC animated:YES];
                 break;
             }
             case 1://给我们评分

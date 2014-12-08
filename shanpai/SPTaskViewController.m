@@ -10,6 +10,7 @@
 #import "SPTaskADView.h"
 #import "SPTaskCell.h"
 #import "SPTaskModel.h"
+#import "SPTaskBeginController.h"
 
 @interface SPTaskViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -150,6 +151,23 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (ISLogined)
+    {
+        SPTaskModel *model = self.dataList[indexPath.row];
+        
+        NSString *module = model.module;
+        if([module isEqualToString:@"TestPaper"])
+        {
+            SPTaskBeginController *taskBeginVC = [[SPTaskBeginController alloc] init];
+            taskBeginVC.model = model;
+            taskBeginVC.title = @"答题";
+            [self presentViewControllerWithNavc:taskBeginVC];
+        }
+    }
+    else
+    {
+        [self pressentToLoginViewController];
+    }
 }
 
 - (void)loadData

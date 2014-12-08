@@ -16,6 +16,11 @@
 #import "SPSetController.h"
 #import "SPPKPoolController.h"
 #import "SPExangeController.h"
+#import "SPFansController.h"
+#import "SPMyAttentionController.h"
+#import "SPGoldRecordController.h"
+#import "SPReSetViewController.h"
+#import "SPEditInfoController.h"
 
 @interface SPUserViewController ()<UITableViewDataSource,UITableViewDelegate,UIActionSheetDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -49,6 +54,8 @@
 - (void)gotoAttentionVC;
 //上传头像
 - (void)upLoadImage:(UIImage *)image;
+//修改资料
+- (void)modifyInfo:(id)sender;
 @end
 
 @implementation SPUserViewController
@@ -65,6 +72,7 @@
     self.title = @"个人中心";
     [self setBackLeftItem];
     [self configTableView];
+    [self configRightItemWithImage:@"nav_bar_modify_icon" action:@selector(modifyInfo:)];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -326,12 +334,16 @@
         case 3://兑奖记录
             v = [[SPExangeController alloc] init];
             break;
-//        case 4://金豆记录
-//            v = [[[MarkRecodeViewController alloc] init] autorelease];
-//            break;
-//        case 5:
-//            v = [[[MemberUpdatePswViewController alloc] init] autorelease];
-//            break;
+        case 4://金豆记录
+            v = [[SPGoldRecordController alloc] init];
+            break;
+        case 5:
+        {
+            SPReSetViewController *forgetpwVC = [[SPReSetViewController alloc] init];
+            forgetpwVC.controllerType = resetPassward;
+            v = forgetpwVC;
+            break;
+        }
 //        case 6:
 //            v = [[[AlarmVC alloc]init]autorelease];
 //            break;
@@ -418,12 +430,15 @@
  */
 - (void)gotoFansVC
 {
-    
+    SPFansController   *fansVC = [[SPFansController alloc] init];
+    [self.navigationController pushViewController:fansVC animated:YES];
 }
 
 //跳转到关注
 - (void)gotoAttentionVC
 {
+    SPMyAttentionController  *followVC = [[SPMyAttentionController alloc] init];
+    [self.navigationController pushViewController:followVC animated:YES];
 }
 
 //上传头像
@@ -443,6 +458,12 @@
              [self.headView updateUserInfo];
          }
     }];
+}
+
+- (void)modifyInfo:(id)sender
+{
+    SPEditInfoController *editInfoVC = [[SPEditInfoController alloc] init];
+    [self.navigationController pushViewController:editInfoVC animated:YES];
 }
 
 @end

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SPGameDynamicView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="is2-Vb-4Kg">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="is2-Vb-4Kg" secondAttribute="bottom" id="DN0-cQ-kJc"/>
+                <constraint firstAttribute="trailing" secondItem="is2-Vb-4Kg" secondAttribute="trailing" id="FAs-T7-pgI"/>
+                <constraint firstItem="is2-Vb-4Kg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="RMq-gL-A4T"/>
+                <constraint firstItem="is2-Vb-4Kg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="fZ7-HQ-lzE"/>
+            </constraints>
+            <connections>
+                <outlet property="tableView" destination="is2-Vb-4Kg" id="D1I-FK-Fao"/>
+            </connections>
+        </view>
+    </objects>
+</document>

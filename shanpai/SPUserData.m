@@ -205,4 +205,72 @@ NSString *spAccountChanged = @"com.shanpai.AccountChanged";
     return [self spUserInfo].loginInfo[@"money"];
 }
 
++ (NSString *)userSex
+{
+    NSString *content = nil;
+    
+    NSString *sex = [ SPUserData spUserInfo].loginInfo[@"gender"];
+    if ([sex isEqualToString:@"0"])
+    {
+        content = @"女";
+    }
+    else if ([sex isEqualToString:@"1"])
+    {
+        content = @"男";
+    }
+    else if ([sex isEqualToString:@"女"])
+    {
+        content = @"女";
+    }
+    else if ([sex isEqualToString:@"男"])
+    {
+        content = @"男";
+    }
+    return content;
+}
+
++ (NSString *)userNickName
+{
+    return [SPUserData spUserInfo].loginInfo[@"nickname"];
+}
+
++ (NSString *)userName
+{
+    return [SPUserData spUserInfo].loginInfo[@"name"];
+}
+
++ (NSString *)phonenum
+{
+    return [SPUserData spUserInfo].loginInfo[@"phonenum"];
+}
+
++ (NSString *)receive_postcode
+{
+    return [SPUserData spUserInfo].loginInfo[@"receive_postcode"];
+}
+
++ (NSString *)receive_address
+{
+    return [SPUserData spUserInfo].loginInfo[@"receive_address"];
+}
+
++ (void)updateUserInfo:(NSDictionary *)params
+                 block:(void (^)(NSDictionary *, NSError *))block
+{
+    [SVProgressHUD show];
+    NSString *path = @"Member/update";
+    [[SPHttpClient manager] POST:path
+                      parameters:params
+                         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                             if (block)
+                             {
+                                 block(responseObject,nil);
+                             }
+                             [SVProgressHUD showSuccessWithStatus:responseObject[@"info"]];
+                         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                             block(nil,error);
+                             [SVProgressHUD dismiss];
+                         }];
+}
+
 @end

@@ -29,11 +29,47 @@ extern NSString *spAccountChanged;
  */
 + (NSString *)userID;
 /*!
+ *  用户昵称
+ *
+ *  @return 昵称
+ */
++ (NSString *)userNickName;
+/*!
+ *  真实姓名
+ *
+ *  @return 姓名  ==送货地址那里要用
+ */
++ (NSString *)userName;
+/*!
+ *  性别
+ *
+ *  @return 男 、 女
+ */
++ (NSString *)userSex;
+/*!
  *  奖池数量
  *
  *  @return 奖池
  */
 + (NSString *)money;
+/*!
+ *  手机号码
+ *
+ *  @return 手机号码
+ */
++ (NSString *)phonenum;
+/*!
+ *  邮政编码
+ *
+ *  @return 邮政编码
+ */
++ (NSString *)receive_postcode;
+/*!
+ *  收货地址
+ *
+ *  @return 地址
+ */
++ (NSString *)receive_address;
 /*!
  *  是否登录
  *
@@ -85,4 +121,12 @@ extern NSString *spAccountChanged;
  *  @param avatar 头像地址
  */
 + (void)updateAvatar:(NSString *)avatar;
+/*!
+ *  更新用户信息到服务器
+ *
+ *  @param params 参数
+ *  @param block  回调
+ */
++ (void)updateUserInfo:(NSDictionary *)params
+                 block:(void (^)(NSDictionary *info, NSError *error))block;
 @end

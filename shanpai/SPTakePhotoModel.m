@@ -13,7 +13,7 @@
 @implementation SPTakePhotoModel
 
 + (void)updateImage:(UIImage *)image
-              block:(void (^)(NSArray *, NSError *))block
+              block:(void (^)(NSDictionary *, NSError *))block
 {
     [SVProgressHUD showWithStatus:@"正在识别，请稍后..."];
     
@@ -37,7 +37,7 @@ constructingBodyWithBlock:^(id<AFMultipartFormData> formData)
              [SVProgressHUD showErrorWithStatus:responseObject[@"info"]];
              if (block)
              {
-                 block(responseObject[@"data"],nil);
+                 block(responseObject,nil);
              }
          }
          else
@@ -45,7 +45,7 @@ constructingBodyWithBlock:^(id<AFMultipartFormData> formData)
              [SVProgressHUD showSuccessWithStatus:@"识别成功"];
              if (block)
              {
-                 block(responseObject[@"data"],nil);
+                 block(responseObject,nil);
              }
          }
      } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -55,6 +55,37 @@ constructingBodyWithBlock:^(id<AFMultipartFormData> formData)
              block(nil,error);
          }
      }];
+}
+
++ (void)uploadAd:(NSString *)content
+          itemId:(NSString *)itemID
+           block:(void (^)(NSDictionary *, NSError *))block
+{
+    //path
+    NSString *path = @"Advert/insert";
+    NSDictionary *params = @{
+                             @"id"   : itemID,
+                             @"userid"  : [SPUserData userID],
+                             @"content" : content,
+                             };
+    
+    [SVProgressHUD show];
+    [[SPHttpClient manager] GET:path
+                     parameters:params
+                        success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                            if (block)
+                            {
+                                block(responseObject,nil);
+                            }
+                            dispatch_async(dispatch_get_main_queue(), ^{
+                                [SVProgressHUD showSuccessWithStatus:responseObject[@"info"]];
+                            });
+                        }
+                        failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                            dispatch_async(dispatch_get_main_queue(), ^{
+                                [SVProgressHUD dismiss];
+                            });
+                        }];
 }
 
 @end
