@@ -63,11 +63,8 @@
     self.adview = array[0];
     if (self.adview)
     {
-//        __weak __typeof(self)weakSelf = self;
         self.adview.action = ^(NSInteger index,NSString *url)
         {
-//            SVModalWebViewController *webViewController = [[SVModalWebViewController alloc] initWithAddress:url];
-//            [weakSelf presentViewController:webViewController animated:YES completion:NULL];
             [[NSNotificationCenter defaultCenter] postNotificationName:@"pktaiOpenUrl"
                                                                 object:nil
                                                               userInfo:@{
@@ -114,7 +111,6 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    //pkTaiOpenViewController
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"pkTaiOpenViewController"
                                                         object:nil
@@ -125,7 +121,7 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 80;
+    return 90;
 }
 
 - (void)loadAdInfo

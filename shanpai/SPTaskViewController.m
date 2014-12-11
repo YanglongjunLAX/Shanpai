@@ -156,11 +156,18 @@
         SPTaskModel *model = self.dataList[indexPath.row];
         
         NSString *module = model.module;
-        if([module isEqualToString:@"TestPaper"])
+        if([module isEqualToString:@"TestPaper"])//答题
         {
             SPTaskBeginController *taskBeginVC = [[SPTaskBeginController alloc] init];
             taskBeginVC.model = model;
-            taskBeginVC.title = @"答题";
+            taskBeginVC.type = SPTaskTestPaper;
+            [self presentViewControllerWithNavc:taskBeginVC];
+        }
+        else if ([module isEqualToString:@"Questionnaire"])
+        {
+            SPTaskBeginController *taskBeginVC = [[SPTaskBeginController alloc] init];
+            taskBeginVC.model = model;
+            taskBeginVC.type = SPTaskQuestionnaire;
             [self presentViewControllerWithNavc:taskBeginVC];
         }
     }

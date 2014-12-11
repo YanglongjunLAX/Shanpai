@@ -8,6 +8,7 @@
 
 #import "SPEditInfoController.h"
 #import "SPModifyInfoController.h"
+#import "SPEditPhoneNumberController.h"
 
 @interface SPEditInfoController ()<UITableViewDataSource,UITableViewDelegate>
 //标题
@@ -100,7 +101,8 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.row == 3)
     {
-        [SVProgressHUD showSuccessWithStatus:@"功能还没有实现"];
+        SPEditPhoneNumberController *editVC = [[SPEditPhoneNumberController alloc] init];
+        [self.navigationController pushViewController:editVC animated:YES];
     }
     else
     {

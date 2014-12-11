@@ -22,16 +22,24 @@
  */
 @property (weak, nonatomic) IBOutlet UILabel *releationLabel;
 
+//关系label点击事件
+- (void)releationTap:(id)sender;
 @end
 
 @implementation SPFansCell
 
-- (void)awakeFromNib {
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    self.releationLabel.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tapGes = [[UITapGestureRecognizer alloc]
+                                      initWithTarget:self
+                                      action:@selector(releationTap:)];
+    [self.releationLabel addGestureRecognizer:tapGes];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
 }
 
 - (void)setModel:(SPFansModel *)model
@@ -66,6 +74,14 @@
             default:
                 break;
         }
+    }
+}
+
+- (void)releationTap:(id)sender
+{
+    if (self.fansDynamic)
+    {
+        self.fansDynamic(self.model);
     }
 }
 

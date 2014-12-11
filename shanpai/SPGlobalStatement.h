@@ -47,4 +47,23 @@ typedef NS_ENUM(NSInteger,LoginState)
     hasLogin
 };
 
+/*!
+ *  pk页面类型
+ */
+typedef NS_ENUM(NSUInteger, SPpkType){
+    /*!
+     *  错误
+     */
+    SPpkTypeError = 0,
+    /*!
+     *  自己邀请别人进行pk
+     */
+    SPpkAttack,
+    /*!
+     *  自己被邀请pk
+     */
+    SPpkBeating,
+};
+
+
 #endif

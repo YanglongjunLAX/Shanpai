@@ -106,6 +106,21 @@
     return 45.0f;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    SPGameDynamicModel *model = self.dataList[indexPath.row];
+    if ([model.code integerValue] != 4)
+    {
+        [SPGameDynamicModel requestGameMessageByMessageID:model.pk_id
+                                                   module:model.module
+                                                    block:^(NSDictionary *info, NSError *error){
+                                                        [[NSNotificationCenter defaultCenter] postNotificationName:@"pkGameDynamic" object:nil userInfo:@{@"info" : info}];
+                                                    }];
+    }
+}
+
 - (void)loadData
 {
     __weak __typeof(self)weakSelf = self;

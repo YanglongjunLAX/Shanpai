@@ -7,7 +7,17 @@
 //
 
 #import "SPBaseViewController.h"
+#import "SPPKresultModel.h"
 
 @interface SPGuessFingerController : SPBaseViewController
+/*!
+ *  页面类型
+ */
+@property (nonatomic, assign) SPpkType controllerType;
+
+/*!
+ *  游戏动态接受别人的邀请
+ */
+@property (nonatomic, strong) SPPKresultModel  *gameDynamicModel;
 
 @end

@@ -13,6 +13,8 @@
                 <outlet property="inviteFriendButton" destination="Ejj-QM-Uib" id="q36-eI-yrx"/>
                 <outlet property="jiandaoImageView" destination="u7j-Nb-X8C" id="l6r-ka-pUJ"/>
                 <outlet property="pkButton" destination="geV-RE-zEE" id="bao-wY-3f0"/>
+                <outlet property="rePKbutton" destination="26i-Qb-I85" id="ajq-99-m0D"/>
+                <outlet property="reject" destination="RhC-Tq-HBi" id="WGV-MF-BhW"/>
                 <outlet property="selfHeadImageView" destination="IPj-YL-Bdc" id="XZE-jl-CHk"/>
                 <outlet property="shitouImageView" destination="OFg-vT-b94" id="esn-Z9-x0a"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -26,6 +28,13 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pk_cq_bg" translatesAutoresizingMaskIntoConstraints="NO" id="wcL-W4-eox">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RhC-Tq-HBi">
+                    <rect key="frame" x="463" y="220" width="117" height="36"/>
+                    <state key="normal" title="拒绝" backgroundImage="pk_btn_reject">
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IPj-YL-Bdc">
                     <rect key="frame" x="20" y="20" width="80" height="80"/>
                     <constraints>
@@ -92,26 +101,26 @@
                     </state>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="猜拳说明：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UGf-2s-ZaO">
-                    <rect key="frame" x="20" y="491" width="85" height="21"/>
+                    <rect key="frame" x="20" y="500" width="85" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2. 24小时内不应战视为平局, 双方不扣分;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rL-2U-5Gw">
-                    <rect key="frame" x="20" y="543" width="308" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <rect key="frame" x="20" y="549" width="273" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3. 亲, 一段时间后记得回来看结果哟;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2av-wT-w2q">
-                    <rect key="frame" x="20" y="569" width="272" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <rect key="frame" x="20" y="572" width="241" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. 和小伙伴们一起玩剪刀石头布吧! 我在等你,你在哪里?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRi-KT-k90">
-                    <rect key="frame" x="20" y="517" width="417" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. 和小伙伴们一起玩剪刀石头布吧! 我在等你,你在哪里?" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRi-KT-k90">
+                    <rect key="frame" x="20" y="526" width="570" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -121,18 +130,28 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26i-Qb-I85">
+                    <rect key="frame" x="20" y="220" width="117" height="36"/>
+                    <state key="normal" title="放招出去" backgroundImage="pk_btn_send">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="centerX" secondItem="geV-RE-zEE" secondAttribute="centerX" id="3Ym-Eg-ybf"/>
+                <constraint firstItem="26i-Qb-I85" firstAttribute="top" secondItem="RhC-Tq-HBi" secondAttribute="top" id="4O7-Wq-2sz"/>
                 <constraint firstItem="2av-wT-w2q" firstAttribute="top" secondItem="5rL-2U-5Gw" secondAttribute="bottom" constant="5" id="77W-pA-rTt"/>
                 <constraint firstAttribute="centerX" secondItem="vsA-3F-nQ0" secondAttribute="centerX" id="79s-MJ-6pt"/>
+                <constraint firstItem="26i-Qb-I85" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="EY4-6K-ggI"/>
                 <constraint firstItem="IPj-YL-Bdc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="HSe-EX-91X"/>
                 <constraint firstAttribute="trailing" secondItem="yEW-oL-XTw" secondAttribute="trailing" constant="20" id="LNZ-Jt-YY6"/>
                 <constraint firstAttribute="trailing" secondItem="UNK-fk-qYb" secondAttribute="trailing" constant="20" id="Mzp-lu-n0c"/>
                 <constraint firstItem="Ukg-rd-Src" firstAttribute="top" secondItem="yEW-oL-XTw" secondAttribute="bottom" constant="5" id="SE3-Sd-NSI"/>
                 <constraint firstItem="2av-wT-w2q" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="Uzv-86-WvJ"/>
                 <constraint firstItem="UNK-fk-qYb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="150" id="W2G-2e-d8E"/>
+                <constraint firstAttribute="trailing" secondItem="RhC-Tq-HBi" secondAttribute="trailing" constant="20" id="Y6N-5q-E3o"/>
                 <constraint firstAttribute="bottom" secondItem="2av-wT-w2q" secondAttribute="bottom" constant="10" id="Yfc-TW-Op9"/>
                 <constraint firstAttribute="centerX" secondItem="Ejj-QM-Uib" secondAttribute="centerX" id="ZgN-i2-i0M"/>
                 <constraint firstItem="5rL-2U-5Gw" firstAttribute="leading" secondItem="2av-wT-w2q" secondAttribute="leading" id="aIi-NX-Zh4"/>
@@ -140,6 +159,7 @@
                 <constraint firstAttribute="bottom" secondItem="wcL-W4-eox" secondAttribute="bottom" id="h3B-qE-T2L"/>
                 <constraint firstItem="wcL-W4-eox" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hAz-my-Pti"/>
                 <constraint firstItem="Ukg-rd-Src" firstAttribute="centerX" secondItem="yEW-oL-XTw" secondAttribute="centerX" id="jbU-Fo-8dC"/>
+                <constraint firstAttribute="trailing" secondItem="nRi-KT-k90" secondAttribute="trailing" constant="10" id="jmD-zJ-rF4"/>
                 <constraint firstItem="UNK-fk-qYb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="kVh-mV-ZfW"/>
                 <constraint firstItem="wcL-W4-eox" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="m06-Qw-Udy"/>
                 <constraint firstItem="IPj-YL-Bdc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="mZc-8k-IHk"/>
@@ -149,6 +169,7 @@
                 <constraint firstItem="5rL-2U-5Gw" firstAttribute="leading" secondItem="nRi-KT-k90" secondAttribute="leading" id="pol-yT-TNS"/>
                 <constraint firstItem="5rL-2U-5Gw" firstAttribute="leading" secondItem="UGf-2s-ZaO" secondAttribute="leading" id="rkk-FH-H5A"/>
                 <constraint firstItem="geV-RE-zEE" firstAttribute="top" secondItem="UNK-fk-qYb" secondAttribute="bottom" constant="10" id="sJc-sR-ywc"/>
+                <constraint firstItem="26i-Qb-I85" firstAttribute="top" secondItem="UNK-fk-qYb" secondAttribute="bottom" constant="10" id="tmn-Ek-RBH"/>
                 <constraint firstItem="yEW-oL-XTw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="v5R-yu-rmP"/>
                 <constraint firstItem="vsA-3F-nQ0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="x0Z-yi-83i"/>
             </constraints>
@@ -156,6 +177,7 @@
         </view>
     </objects>
     <resources>
+        <image name="pk_btn_reject" width="117" height="36"/>
         <image name="pk_btn_send" width="117" height="36"/>
         <image name="pk_cq_bao" width="85" height="85"/>
         <image name="pk_cq_bg" width="320" height="480"/>

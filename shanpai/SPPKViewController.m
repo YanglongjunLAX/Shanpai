@@ -13,8 +13,11 @@
 #import "SPGameDynamicView.h"
 
 #import "SPGuessFingerController.h"//猜拳
-
+#import "SPcombinationPicController.h"//拼图
+#import "GuessPicController.h"//猜图
 #import "SPPKPoolController.h"//奖池排行
+
+#import "SPPKresultModel.h"
 
 
 #define kForSegmentHight      35.0f
@@ -38,6 +41,8 @@
 - (void)pkTaiOpenViewController:(NSNotification *)notify;
 //添加通知
 - (void)addNotiftys;
+//游戏动态点击通知
+- (void)pkGameDynamicNotify:(NSNotification *)notify;
 @end
 
 @implementation SPPKViewController
@@ -115,6 +120,11 @@
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(pkTaiOpenViewController:)
                                                  name:@"pkTaiOpenViewController"
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(pkGameDynamicNotify:)
+                                                 name:@"pkGameDynamic"
                                                object:nil];
 }
 
@@ -243,15 +253,24 @@
     {
         case 0:
         {
-            SPGuessFingerController *gesVC = [[SPGuessFingerController alloc] init];
+            SPGuessFingerController    *gesVC = [[SPGuessFingerController alloc] init];
+            gesVC.controllerType = SPpkAttack;
             VC = gesVC;
             break;
         }
         case 1:
         {
+            SPcombinationPicController  *pintuVC = [[SPcombinationPicController alloc] init];
+            pintuVC.controllerType = SPpkAttack;
+            VC = pintuVC;
             break;
         }
         case 2:
+        {
+            GuessPicController *guessVC = [[GuessPicController alloc] init];
+            guessVC.controllerType = SPpkAttack;
+            VC = guessVC;
+        }
             break;
         default:
             break;
@@ -259,6 +278,48 @@
     if (VC)
     {
         [self presentViewControllerWithNavc:VC];
+    }
+}
+
+- (void)pkGameDynamicNotify:(NSNotification *)notify
+{
+    NSDictionary *info = notify.userInfo;
+    
+    NSDictionary *dInfo = info[@"info"];
+    NSDictionary *params = dInfo[@"data"][0];
+    SPPKresultModel *model = [[SPPKresultModel alloc] initWithDictionary:params];
+    if ([model.code integerValue] == 3) //跳到网页.....
+    {
+        NSString *pathPre = @"http://shanpai.iushare.com/Api/PKMessage/jump/";
+        
+        NSString *usrlPath = [NSString stringWithFormat:@"%@userid/%@/id/%@/module/%@",pathPre,[SPUserData userID],model.pk_id,model.module];
+        
+        SVModalWebViewController *webViewController = [[SVModalWebViewController alloc] initWithAddress:usrlPath];
+        [self presentViewController:webViewController animated:YES completion:NULL];
+    }
+    else if ([model.code integerValue] == 2)
+    {
+        if ([model.module isEqualToString:@"Fist"])//猜拳
+        {
+            SPGuessFingerController  *fingerVC = [[SPGuessFingerController alloc] init];
+            fingerVC.controllerType = SPpkBeating;
+            fingerVC.gameDynamicModel = model;
+            [self presentViewControllerWithNavc:fingerVC];
+        }
+        else if ([model.module isEqualToString:@"Puzzle"])
+        {
+            SPcombinationPicController *pintuVC = [[SPcombinationPicController alloc] init];
+            pintuVC.controllerType = SPpkBeating;
+            pintuVC.gameDynamicModel = model;
+            [self presentViewControllerWithNavc:pintuVC];
+        }
+        else
+        {
+            GuessPicController *guessVC = [[GuessPicController alloc] init];
+            guessVC.controllerType = SPpkBeating;
+            guessVC.gameDynamicModel = model;
+            [self presentViewControllerWithNavc:guessVC];
+        }
     }
 }
 

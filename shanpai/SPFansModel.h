@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BaseModel.h"
 
-@interface SPFansModel : NSObject
+@interface SPFansModel : BaseModel
 /*!
  *  模型属性
  */
@@ -28,14 +29,6 @@
 @property (nonatomic, strong) NSString   *remark;
 @property (nonatomic, strong) NSString   *uid;
 /*!
- *  使用字典初始化
- *
- *  @param dictionary 字典
- *
- *  @return 模型
- */
-- (id)initWithDictionary:(NSDictionary *)dictionary;
-/*!
  *  分页获取粉丝数据
  *
  *  @param pageNum 页数
@@ -51,5 +44,20 @@
  */
 + (void)spfGetFollowList:(NSInteger)pageNumber
                    block:(void (^)(NSArray *, NSError *))block;
-
+/*!
+ *  请求最近好友列表
+ *
+ *  @param pageNumber 页数
+ *  @param block      回调
+ */
++ (void)spfGetNearList:(NSInteger)pageNumber
+                 block:(void (^)(NSArray *, NSError *))block;
+/*!
+ *  请求周边列表
+ *
+ *  @param pageNumber 页数
+ *  @param block      回调
+ */
++ (void)spfGetAroundList:(NSInteger)pageNumber
+                   block:(void (^)(NSArray *, NSError *))block;
 @end

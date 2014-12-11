@@ -122,4 +122,34 @@ static const NSString *levelPath  = @"PkCount/getEqualCount";
                         }];
 }
 
++ (void)requestGameMessageByMessageID:(NSString *)messageID
+                               module:(NSString *)module
+                                block:(void (^)(NSDictionary *, NSError *))block
+{
+    NSString       *path     = @"PKMessage/router/";
+    NSDictionary   *params   = @{
+                                 @"id"       :  messageID,
+                                 @"module"   :  module,
+                                 };
+    
+    [[SPHttpClient manager] GET:path
+                     parameters:params
+                        success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                            
+                            if (block)
+                            {
+                                block(responseObject, nil);
+                            }
+                            
+                            dispatch_async(dispatch_get_main_queue(), ^{
+                                [SVProgressHUD showSuccessWithStatus:responseObject[@"info"]];
+                            });
+                        }
+                        failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                            dispatch_async(dispatch_get_main_queue(), ^{
+                                [SVProgressHUD dismiss];
+                            });
+                        }];
+}
+
 @end

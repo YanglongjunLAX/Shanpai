@@ -74,27 +74,30 @@ constructingBodyWithBlock:^(id<AFMultipartFormData> formData)
 
 + (void)spkGetSendNumber:(void (^)(NSDictionary *, NSError *))block
 {
-    NSString *path = @"Beans/sendNum";
-    NSDictionary *params = @{@"userid": [SPUserData userID]};
-    [[SPHttpClient manager] GET:path
-                     parameters:params
-                        success:^(AFHTTPRequestOperation *operation, id responseObject) {
-                            NSLog(@"%@",responseObject);
-                            NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
-                            [userDefault setObject:responseObject[@"snum"] forKey:@"sendnumber"];
-                            if (block)
-                            {
-                                block(responseObject,nil);
+    if (ISLogined && [SPUserData userID])
+    {
+        NSString *path = @"Beans/sendNum";
+        NSDictionary *params = @{@"userid": [SPUserData userID]};
+        [[SPHttpClient manager] GET:path
+                         parameters:params
+                            success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                                NSLog(@"%@",responseObject);
+                                NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+                                [userDefault setObject:responseObject[@"snum"] forKey:@"sendnumber"];
+                                if (block)
+                                {
+                                    block(responseObject,nil);
+                                }
                             }
-                        }
-                        failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                            if (block)
-                            {
-                                block(nil,error);
-                            }
-                            NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
-                            [userDefault setObject:@"0" forKey:@"sendnumber"];
-                        }];
+                            failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                                if (block)
+                                {
+                                    block(nil,error);
+                                }
+                                NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+                                [userDefault setObject:@"0" forKey:@"sendnumber"];
+                            }];
+    }
 }
 
 @end

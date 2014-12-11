@@ -65,4 +65,8 @@ typedef NS_ENUM(NSInteger, SPGameDynamicStyle){
  */
 + (void)requestGameResultByType:(SPGameDynamicStyle)style
                           block:(void (^)(NSDictionary *, NSError *))block;
+//游戏动态页面，请求游戏结果信息
++ (void)requestGameMessageByMessageID:(NSString *)messageID
+                               module:(NSString *)module
+                                block:(void (^)(NSDictionary *, NSError *))block;
 @end

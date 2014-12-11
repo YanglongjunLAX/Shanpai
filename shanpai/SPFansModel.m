@@ -16,32 +16,6 @@
 
 @implementation SPFansModel
 
-- (id)initWithDictionary:(NSDictionary *)dictionary
-{
-    self = [super init];
-    if (self)
-    {
-        self.avatar               = dictionary[@"avatar"];
-        self.buddy_lastuptime     = SPFormatstring(dictionary[@"buddy_lastuptime"]);
-        self.buddyid              = SPFormatstring(dictionary[@"buddyid"]);
-        self.dateline             = SPFormatstring(dictionary[@"dateline"]);
-        
-        self.idescription          = SPFormatstring(dictionary[@"description"]);
-        
-        self.fans_count           = SPFormatstring(dictionary[@"fans_count"]);
-        self.follow_count         = SPFormatstring(dictionary[@"follow_count"]);
-        self.grade                = SPFormatstring(dictionary[@"grade"]);
-        self.group_id             = SPFormatstring(dictionary[@"group_id"]);
-        self._id                  = SPFormatstring(dictionary[@"id"]);
-        self.newdynamic           = SPFormatstring(dictionary[@"newdynamic"]);
-        self.nickname             = SPFormatstring(dictionary[@"nickname"]);
-        self.relation             = SPFormatstring(dictionary[@"relation"]);
-        self.remark               = SPFormatstring(dictionary[@"remark"]);
-        self.uid                  = SPFormatstring(dictionary[@"uid"]);
-    }
-    return self;
-}
-
 + (void)spfGetFansList:(NSInteger)pageNum
                  block:(void (^)(NSArray *, NSError *))block
 {
@@ -116,6 +90,64 @@
     }];
     
     return result;
+}
+
++ (void)spfGetNearList:(NSInteger)pageNumber
+                 block:(void (^)(NSArray *, NSError *))block
+{
+    NSString *path = @"Fist/near/";
+    NSDictionary *params   = @{
+                               @"p"    :  [NSString stringWithFormat:@"%ld",(long)pageNumber],
+                               @"listRows" : @20,
+                               };
+    
+    [SVProgressHUD show];
+    [[SPHttpClient manager] GET:path
+                     parameters:params
+                        success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                            NSArray *resArray = [self spfConvertFromArray:responseObject[@"data"]];
+                            if (block)
+                            {
+                                block(resArray,nil);
+                            }
+                            dispatch_async(dispatch_get_main_queue(), ^{
+                                [SVProgressHUD showSuccessWithStatus:responseObject[@"info"]];
+                            });
+                        }
+                        failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                            dispatch_async(dispatch_get_main_queue(), ^{
+                                [SVProgressHUD dismiss];
+                            });
+                        }];
+}
+
++ (void)spfGetAroundList:(NSInteger)pageNumber
+                   block:(void (^)(NSArray *, NSError *))block
+{
+    NSString *path = @"Member/near";
+    NSDictionary *params   = @{
+                               @"p"    :  [NSString stringWithFormat:@"%ld",(long)pageNumber],
+                               @"listRows" : @20,
+                               };
+    
+    [SVProgressHUD show];
+    [[SPHttpClient manager] GET:path
+                     parameters:params
+                        success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                            NSArray *resArray = [self spfConvertFromArray:responseObject[@"data"]];
+                            if (block)
+                            {
+                                block(resArray,nil);
+                            }
+                            dispatch_async(dispatch_get_main_queue(), ^{
+                                [SVProgressHUD showSuccessWithStatus:responseObject[@"info"]];
+                            });
+                        }
+                        failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                            dispatch_async(dispatch_get_main_queue(), ^{
+                                [SVProgressHUD dismiss];
+                            });
+                        }];
 }
 
 @end

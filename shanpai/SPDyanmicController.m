@@ -44,6 +44,11 @@
     self.title = @"动态";
     
     self.pageNumber = 0;
+    if (self.userID == nil && (self.userInfo != nil))
+    {
+        self.userID = self.userInfo.uid;
+    }
+    
     [self spdSetTableView];
     [self.tableView triggerPullToRefresh];
 }

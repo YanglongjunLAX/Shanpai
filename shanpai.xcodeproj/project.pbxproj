@@ -26,14 +26,18 @@
 		01327EFF1A1B75A6008467B6 /* SPAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01327EFE1A1B75A6008467B6 /* SPAdView.xib */; };
 		01327F021A1B7947008467B6 /* SPAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01327F011A1B7947008467B6 /* SPAdView.m */; };
 		01327F061A1B904B008467B6 /* SwipeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01327F051A1B904B008467B6 /* SwipeView.m */; };
+		01432A1D1A37461D0041F5F6 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01432A1C1A37461D0041F5F6 /* CoreText.framework */; };
 		014AD4CC1A08C4DC00AC2C96 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 014AD4CB1A08C4DC00AC2C96 /* main.m */; };
 		014AD4CF1A08C4DC00AC2C96 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 014AD4CE1A08C4DC00AC2C96 /* AppDelegate.m */; };
-		014AD4D21A08C4DC00AC2C96 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 014AD4D11A08C4DC00AC2C96 /* ViewController.m */; };
 		014AD4D51A08C4DC00AC2C96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 014AD4D31A08C4DC00AC2C96 /* Main.storyboard */; };
 		014AD4D71A08C4DC00AC2C96 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 014AD4D61A08C4DC00AC2C96 /* Images.xcassets */; };
 		014AD4E61A08C4DC00AC2C96 /* shanpaiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 014AD4E51A08C4DC00AC2C96 /* shanpaiTests.m */; };
 		014AD4F31A08C52000AC2C96 /* SPBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 014AD4F21A08C52000AC2C96 /* SPBaseViewController.m */; };
 		014AD4F81A08C5B900AC2C96 /* HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 014AD4F71A08C5B900AC2C96 /* HexColor.m */; };
+		014CBA751A36DBCF00157BE5 /* SPcombinationPicController.m in Sources */ = {isa = PBXBuildFile; fileRef = 014CBA731A36DBCF00157BE5 /* SPcombinationPicController.m */; };
+		014CBA761A36DBCF00157BE5 /* SPcombinationPicController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 014CBA741A36DBCF00157BE5 /* SPcombinationPicController.xib */; };
+		014CBA7A1A36F63000157BE5 /* GuessPicController.m in Sources */ = {isa = PBXBuildFile; fileRef = 014CBA781A36F63000157BE5 /* GuessPicController.m */; };
+		014CBA7B1A36F63000157BE5 /* GuessPicController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 014CBA791A36F63000157BE5 /* GuessPicController.xib */; };
 		014D35841A08CDA900D86711 /* UIView+AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 014D35831A08CDA900D86711 /* UIView+AutoLayout.m */; };
 		014D35871A08CDF400D86711 /* SPTabbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 014D35861A08CDF400D86711 /* SPTabbarView.m */; };
 		014D358A1A08CE5700D86711 /* BLTabbarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 014D35891A08CE5700D86711 /* BLTabbarItem.m */; };
@@ -120,6 +124,10 @@
 		01A477A71A256BE5000AF0E9 /* SPPoolModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A477A61A256BE5000AF0E9 /* SPPoolModel.m */; };
 		01A477AC1A2578CA000AF0E9 /* SPPoolCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A477AA1A2578CA000AF0E9 /* SPPoolCell.m */; };
 		01A477AD1A2578CA000AF0E9 /* SPPoolCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A477AB1A2578CA000AF0E9 /* SPPoolCell.xib */; };
+		01A792601A3585AB00443493 /* SPEditPhoneNumberController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A7925E1A3585AB00443493 /* SPEditPhoneNumberController.m */; };
+		01A792611A3585AB00443493 /* SPEditPhoneNumberController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A7925F1A3585AB00443493 /* SPEditPhoneNumberController.xib */; };
+		01A792651A35A4F700443493 /* SPEnemyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A792631A35A4F700443493 /* SPEnemyController.m */; };
+		01A792661A35A4F700443493 /* SPEnemyController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A792641A35A4F700443493 /* SPEnemyController.xib */; };
 		01AE777F1A2D5B8B00915F69 /* SPFansModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 01AE777E1A2D5B8B00915F69 /* SPFansModel.m */; };
 		01B0EFE51A241A510063B143 /* SPMyMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B0EFE31A241A510063B143 /* SPMyMessageController.m */; };
 		01B0EFE61A241A510063B143 /* SPMyMessageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B0EFE41A241A510063B143 /* SPMyMessageController.xib */; };
@@ -174,6 +182,7 @@
 		01F10E161A28250900C6F5FA /* SPtakeHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F10E151A28250900C6F5FA /* SPtakeHeadView.m */; };
 		01F10E181A28251A00C6F5FA /* SPtakeHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01F10E171A28251A00C6F5FA /* SPtakeHeadView.xib */; };
 		01F10E1C1A28262B00C6F5FA /* SSTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F10E1B1A28262B00C6F5FA /* SSTextView.m */; };
+		01F127161A37ED6D00D70F5B /* SPPKresultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F127151A37ED6D00D70F5B /* SPPKresultModel.m */; };
 		01FF28B91A22CC19004A104F /* SPBeanController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FF28B71A22CC19004A104F /* SPBeanController.m */; };
 		01FF28BA1A22CC19004A104F /* SPBeanController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01FF28B81A22CC19004A104F /* SPBeanController.xib */; };
 		01FF28BD1A22D3F4004A104F /* SPBeanHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FF28BC1A22D3F4004A104F /* SPBeanHeadView.m */; };
@@ -232,13 +241,12 @@
 		01327F011A1B7947008467B6 /* SPAdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPAdView.m; sourceTree = "<group>"; };
 		01327F041A1B904B008467B6 /* SwipeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeView.h; sourceTree = "<group>"; };
 		01327F051A1B904B008467B6 /* SwipeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeView.m; sourceTree = "<group>"; };
+		01432A1C1A37461D0041F5F6 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		014AD4C61A08C4DC00AC2C96 /* shanpai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shanpai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		014AD4CA1A08C4DC00AC2C96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		014AD4CB1A08C4DC00AC2C96 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		014AD4CD1A08C4DC00AC2C96 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		014AD4CE1A08C4DC00AC2C96 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		014AD4D01A08C4DC00AC2C96 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		014AD4D11A08C4DC00AC2C96 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		014AD4D41A08C4DC00AC2C96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		014AD4D61A08C4DC00AC2C96 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		014AD4D91A08C4DC00AC2C96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -249,6 +257,12 @@
 		014AD4F21A08C52000AC2C96 /* SPBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPBaseViewController.m; sourceTree = "<group>"; };
 		014AD4F61A08C5B900AC2C96 /* HexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HexColor.h; sourceTree = "<group>"; };
 		014AD4F71A08C5B900AC2C96 /* HexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HexColor.m; sourceTree = "<group>"; };
+		014CBA721A36DBCF00157BE5 /* SPcombinationPicController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPcombinationPicController.h; sourceTree = "<group>"; };
+		014CBA731A36DBCF00157BE5 /* SPcombinationPicController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPcombinationPicController.m; sourceTree = "<group>"; };
+		014CBA741A36DBCF00157BE5 /* SPcombinationPicController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPcombinationPicController.xib; sourceTree = "<group>"; };
+		014CBA771A36F63000157BE5 /* GuessPicController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuessPicController.h; sourceTree = "<group>"; };
+		014CBA781A36F63000157BE5 /* GuessPicController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuessPicController.m; sourceTree = "<group>"; };
+		014CBA791A36F63000157BE5 /* GuessPicController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GuessPicController.xib; sourceTree = "<group>"; };
 		014D357B1A08C77A00D86711 /* shanpai-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "shanpai-Prefix.pch"; sourceTree = "<group>"; };
 		014D35821A08CDA900D86711 /* UIView+AutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AutoLayout.h"; sourceTree = "<group>"; };
 		014D35831A08CDA900D86711 /* UIView+AutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AutoLayout.m"; sourceTree = "<group>"; };
@@ -391,6 +405,12 @@
 		01A477A91A2578CA000AF0E9 /* SPPoolCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPoolCell.h; sourceTree = "<group>"; };
 		01A477AA1A2578CA000AF0E9 /* SPPoolCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPoolCell.m; sourceTree = "<group>"; };
 		01A477AB1A2578CA000AF0E9 /* SPPoolCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPPoolCell.xib; sourceTree = "<group>"; };
+		01A7925D1A3585AB00443493 /* SPEditPhoneNumberController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPEditPhoneNumberController.h; sourceTree = "<group>"; };
+		01A7925E1A3585AB00443493 /* SPEditPhoneNumberController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPEditPhoneNumberController.m; sourceTree = "<group>"; };
+		01A7925F1A3585AB00443493 /* SPEditPhoneNumberController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPEditPhoneNumberController.xib; sourceTree = "<group>"; };
+		01A792621A35A4F700443493 /* SPEnemyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPEnemyController.h; sourceTree = "<group>"; };
+		01A792631A35A4F700443493 /* SPEnemyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPEnemyController.m; sourceTree = "<group>"; };
+		01A792641A35A4F700443493 /* SPEnemyController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPEnemyController.xib; sourceTree = "<group>"; };
 		01AE777D1A2D5B8B00915F69 /* SPFansModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPFansModel.h; sourceTree = "<group>"; };
 		01AE777E1A2D5B8B00915F69 /* SPFansModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPFansModel.m; sourceTree = "<group>"; };
 		01B0EFE21A241A510063B143 /* SPMyMessageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPMyMessageController.h; sourceTree = "<group>"; };
@@ -482,6 +502,8 @@
 		01F10E171A28251A00C6F5FA /* SPtakeHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPtakeHeadView.xib; sourceTree = "<group>"; };
 		01F10E1A1A28262B00C6F5FA /* SSTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSTextView.h; sourceTree = "<group>"; };
 		01F10E1B1A28262B00C6F5FA /* SSTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSTextView.m; sourceTree = "<group>"; };
+		01F127141A37ED6D00D70F5B /* SPPKresultModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPKresultModel.h; sourceTree = "<group>"; };
+		01F127151A37ED6D00D70F5B /* SPPKresultModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPKresultModel.m; sourceTree = "<group>"; };
 		01FF28B61A22CC19004A104F /* SPBeanController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPBeanController.h; sourceTree = "<group>"; };
 		01FF28B71A22CC19004A104F /* SPBeanController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPBeanController.m; sourceTree = "<group>"; };
 		01FF28B81A22CC19004A104F /* SPBeanController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPBeanController.xib; sourceTree = "<group>"; };
@@ -505,6 +527,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01432A1D1A37461D0041F5F6 /* CoreText.framework in Frameworks */,
 				076BF88D89554E4CB5C33904 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -559,6 +582,9 @@
 				01EE847F1A314FB100BF4A9C /* SPImageRecordController.xib */,
 				01EE84881A31594100BF4A9C /* SPOpinionBackController.h */,
 				01EE84891A31594100BF4A9C /* SPOpinionBackController.m */,
+				01A7925D1A3585AB00443493 /* SPEditPhoneNumberController.h */,
+				01A7925E1A3585AB00443493 /* SPEditPhoneNumberController.m */,
+				01A7925F1A3585AB00443493 /* SPEditPhoneNumberController.xib */,
 			);
 			name = UserCenter;
 			sourceTree = "<group>";
@@ -651,8 +677,6 @@
 				014AD4EF1A08C4E500AC2C96 /* Classes */,
 				014AD4CD1A08C4DC00AC2C96 /* AppDelegate.h */,
 				014AD4CE1A08C4DC00AC2C96 /* AppDelegate.m */,
-				014AD4D01A08C4DC00AC2C96 /* ViewController.h */,
-				014AD4D11A08C4DC00AC2C96 /* ViewController.m */,
 				014AD4D31A08C4DC00AC2C96 /* Main.storyboard */,
 				014AD4D61A08C4DC00AC2C96 /* Images.xcassets */,
 				014AD4D81A08C4DC00AC2C96 /* LaunchScreen.xib */,
@@ -1005,6 +1029,15 @@
 				01EE848B1A316B1E00BF4A9C /* SPGuessFingerController.h */,
 				01EE848C1A316B1E00BF4A9C /* SPGuessFingerController.m */,
 				01EE848D1A316B1E00BF4A9C /* SPGuessFingerController.xib */,
+				01A792621A35A4F700443493 /* SPEnemyController.h */,
+				01A792631A35A4F700443493 /* SPEnemyController.m */,
+				01A792641A35A4F700443493 /* SPEnemyController.xib */,
+				014CBA721A36DBCF00157BE5 /* SPcombinationPicController.h */,
+				014CBA731A36DBCF00157BE5 /* SPcombinationPicController.m */,
+				014CBA741A36DBCF00157BE5 /* SPcombinationPicController.xib */,
+				014CBA771A36F63000157BE5 /* GuessPicController.h */,
+				014CBA781A36F63000157BE5 /* GuessPicController.m */,
+				014CBA791A36F63000157BE5 /* GuessPicController.xib */,
 			);
 			name = pk;
 			sourceTree = "<group>";
@@ -1018,6 +1051,8 @@
 				01627DD61A2EF1EA00C189C6 /* SPGameDynamicModel.m */,
 				01EE84901A319FB100BF4A9C /* SPGuessFingerModel.h */,
 				01EE84911A319FB100BF4A9C /* SPGuessFingerModel.m */,
+				01F127141A37ED6D00D70F5B /* SPPKresultModel.h */,
+				01F127151A37ED6D00D70F5B /* SPPKresultModel.m */,
 			);
 			name = PK;
 			sourceTree = "<group>";
@@ -1309,6 +1344,7 @@
 		E5B28ACD2FF04625A2303592 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				01432A1C1A37461D0041F5F6 /* CoreText.framework */,
 				6112CCE06BCF4D5CB5714742 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -1439,6 +1475,7 @@
 				0185D6F11A26FF0D00B3F37C /* SPTaskCell.xib in Resources */,
 				01F10E121A28238200C6F5FA /* SPdiscernController.xib in Resources */,
 				0191D0131A0B0CEB00FAE08F /* Default-568h@2x.png in Resources */,
+				01A792661A35A4F700443493 /* SPEnemyController.xib in Resources */,
 				01FF28BF1A22D464004A104F /* SPBeanHeadView.xib in Resources */,
 				01327EF51A1B6C2D008467B6 /* SVWebViewControllerActivityChrome-iPad.png in Resources */,
 				01627DCF1A2EBE4C00C189C6 /* SPPKTaiView.xib in Resources */,
@@ -1453,8 +1490,10 @@
 				01327EF91A1B6C2D008467B6 /* SVWebViewControllerActivitySafari-iPad.png in Resources */,
 				01327EF11A1B6C2D008467B6 /* SVWebViewController.strings in Resources */,
 				01B111C11A1C791400ECF6B9 /* SpStoreViewCell.xib in Resources */,
+				014CBA7B1A36F63000157BE5 /* GuessPicController.xib in Resources */,
 				0185D6FB1A271E6000B3F37C /* TableViewCell.xib in Resources */,
 				01DE3AA71A11EF00009A88E0 /* SVProgressHUD.bundle in Resources */,
+				01A792611A3585AB00443493 /* SPEditPhoneNumberController.xib in Resources */,
 				01BEBBC21A0B4AF3007D447F /* SPPKViewController.xib in Resources */,
 				01899FE61A30056900589F7C /* SPGoldRecordController.xib in Resources */,
 				019AB53A1A0C5FE90066E3D0 /* SPTaskAdView.xib in Resources */,
@@ -1468,6 +1507,7 @@
 				01BEBBD71A0B658E007D447F /* SPPinpaiViewController.xib in Resources */,
 				01327EFF1A1B75A6008467B6 /* SPAdView.xib in Resources */,
 				018E57581A0A20FD00BAA18D /* SPReSetViewController.xib in Resources */,
+				014CBA761A36DBCF00157BE5 /* SPcombinationPicController.xib in Resources */,
 				0185D6DB1A26BB0000B3F37C /* SPExangeController.xib in Resources */,
 				01327EFA1A1B6C2D008467B6 /* SVWebViewControllerActivitySafari-iPad@2x.png in Resources */,
 			);
@@ -1549,6 +1589,7 @@
 				01F10E1C1A28262B00C6F5FA /* SSTextView.m in Sources */,
 				01327EFB1A1B6C2D008467B6 /* SVWebViewControllerActivitySafari.m in Sources */,
 				01627DDF1A2F114D00C189C6 /* SPGameDynamicHeadView.m in Sources */,
+				01A792601A3585AB00443493 /* SPEditPhoneNumberController.m in Sources */,
 				018E57571A0A20FD00BAA18D /* SPReSetViewController.m in Sources */,
 				01627DD21A2EEDE600C189C6 /* SPGameDynamicView.m in Sources */,
 				01815ECD1A10599300F80EA2 /* SPUserData.m in Sources */,
@@ -1557,10 +1598,10 @@
 				0185D6FA1A271E6000B3F37C /* TableViewCell.m in Sources */,
 				014D358A1A08CE5700D86711 /* BLTabbarItem.m in Sources */,
 				01FF28B91A22CC19004A104F /* SPBeanController.m in Sources */,
+				014CBA7A1A36F63000157BE5 /* GuessPicController.m in Sources */,
 				01B111C51A1C939C00ECF6B9 /* SPExchangeController.m in Sources */,
 				01FF28BD1A22D3F4004A104F /* SPBeanHeadView.m in Sources */,
 				01B0EFE51A241A510063B143 /* SPMyMessageController.m in Sources */,
-				014AD4D21A08C4DC00AC2C96 /* ViewController.m in Sources */,
 				01BEBBC71A0B4C32007D447F /* HMSegmentedControl.m in Sources */,
 				01B0EFF31A2463720063B143 /* SPMessageController.m in Sources */,
 				01ECE0DF1A0CB55800693595 /* SPHttpClient.m in Sources */,
@@ -1581,6 +1622,7 @@
 				01DE3AA81A11EF00009A88E0 /* SVProgressHUD.m in Sources */,
 				01932E101A2DA06100EC3138 /* SPDynamicModel.m in Sources */,
 				014D35BF1A08D75400D86711 /* SPTableViewController.m in Sources */,
+				01A792651A35A4F700443493 /* SPEnemyController.m in Sources */,
 				018E57461A09CBA600BAA18D /* BLChangeToUserView.m in Sources */,
 				0185D6F01A26FF0D00B3F37C /* SPTaskCell.m in Sources */,
 				01EE84861A3153B500BF4A9C /* SPImageRecordCell.m in Sources */,
@@ -1590,6 +1632,7 @@
 				01F10E111A28238200C6F5FA /* SPdiscernController.m in Sources */,
 				01B0EFEE1A243C950063B143 /* SPMessageCell.m in Sources */,
 				01BEBBD61A0B658E007D447F /* SPPinpaiViewController.m in Sources */,
+				01F127161A37ED6D00D70F5B /* SPPKresultModel.m in Sources */,
 				01ECE0DB1A0CAF2D00693595 /* UIView+TKCategory.m in Sources */,
 				019AB53D1A0C64890066E3D0 /* SPTaskADView.m in Sources */,
 				01899FF71A30459800589F7C /* SPModifyInfoController.m in Sources */,
@@ -1606,6 +1649,7 @@
 				01899FE51A30056900589F7C /* SPGoldRecordController.m in Sources */,
 				01327EF21A1B6C2D008467B6 /* SVModalWebViewController.m in Sources */,
 				01BEBBDC1A0B6864007D447F /* SPStroeViewController.m in Sources */,
+				014CBA751A36DBCF00157BE5 /* SPcombinationPicController.m in Sources */,
 				01F10E161A28250900C6F5FA /* SPtakeHeadView.m in Sources */,
 				01815ED31A1069E600F80EA2 /* Device.m in Sources */,
 				01327EFD1A1B6C2D008467B6 /* SVWebViewControllerActivity.m in Sources */,

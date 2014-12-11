@@ -9,8 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "SPFansModel.h"
 
+typedef void (^releationFunc)(SPFansModel *model);
+
 @interface SPFansCell : UITableViewCell
 
 @property (nonatomic, strong) SPFansModel   *model;
+
+/*!
+ *  点击关系按钮，进入粉丝动态
+ */
+@property (nonatomic, copy) releationFunc    fansDynamic;
 
 @end

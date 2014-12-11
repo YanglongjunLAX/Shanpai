@@ -37,7 +37,7 @@
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 
 /*!
- *  分页获取奖池的数据
+ *  
  *
  *  @param pageNum 页数
  *  @param block   回调
