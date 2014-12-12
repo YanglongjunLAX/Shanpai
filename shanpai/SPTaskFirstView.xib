@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SPTaskBeginView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="76A-Yq-48p" customClass="SwipeView">
+                    <rect key="frame" x="20" y="20" width="560" height="150"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wzF-BB-fYp">
+                            <rect key="frame" x="0.0" y="120" width="560" height="30"/>
+                            <subviews>
+                                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="4gs-o4-gHR">
+                                    <rect key="frame" x="261" y="0.0" width="39" height="37"/>
+                                </pageControl>
+                            </subviews>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="JOk-BL-jPd"/>
+                                <constraint firstItem="4gs-o4-gHR" firstAttribute="top" secondItem="wzF-BB-fYp" secondAttribute="top" id="Kno-Bc-GLs"/>
+                                <constraint firstAttribute="centerX" secondItem="4gs-o4-gHR" secondAttribute="centerX" id="fEP-VI-ptw"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="wzF-BB-fYp" firstAttribute="leading" secondItem="76A-Yq-48p" secondAttribute="leading" id="KI1-xG-DgJ"/>
+                        <constraint firstAttribute="height" constant="150" id="Oi8-rd-WbJ"/>
+                        <constraint firstAttribute="bottom" secondItem="wzF-BB-fYp" secondAttribute="bottom" id="Pki-FG-aVq"/>
+                        <constraint firstAttribute="trailing" secondItem="wzF-BB-fYp" secondAttribute="trailing" id="dHS-nc-dAZ"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FXL-kF-Hka">
+                    <rect key="frame" x="217" y="543" width="167" height="47"/>
+                    <state key="normal" title="开始" backgroundImage="task_btn_start">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fFl-YC-Xlt">
+                    <rect key="frame" x="20" y="180" width="560" height="353"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </webView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="fFl-YC-Xlt" secondAttribute="trailing" constant="20" id="7M5-BC-lxa"/>
+                <constraint firstAttribute="centerX" secondItem="fFl-YC-Xlt" secondAttribute="centerX" id="C4F-Si-hZo"/>
+                <constraint firstItem="fFl-YC-Xlt" firstAttribute="top" secondItem="76A-Yq-48p" secondAttribute="bottom" constant="10" id="L31-k0-Elk"/>
+                <constraint firstItem="fFl-YC-Xlt" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="O1y-pe-mL5"/>
+                <constraint firstItem="76A-Yq-48p" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="QzB-0f-8Jr"/>
+                <constraint firstAttribute="trailing" secondItem="76A-Yq-48p" secondAttribute="trailing" constant="20" id="due-xM-q2v"/>
+                <constraint firstAttribute="bottom" secondItem="FXL-kF-Hka" secondAttribute="bottom" constant="10" id="nwm-NS-V7H"/>
+                <constraint firstAttribute="centerX" secondItem="FXL-kF-Hka" secondAttribute="centerX" id="tO6-YH-sXH"/>
+                <constraint firstItem="FXL-kF-Hka" firstAttribute="top" secondItem="fFl-YC-Xlt" secondAttribute="bottom" constant="10" id="uh2-1u-JEs"/>
+                <constraint firstItem="76A-Yq-48p" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="um6-su-CiA"/>
+            </constraints>
+            <connections>
+                <outlet property="beginButton" destination="FXL-kF-Hka" id="dUn-Ra-OXt"/>
+                <outlet property="imageSwipeView" destination="76A-Yq-48p" id="znx-gz-EZZ"/>
+                <outlet property="pageControl" destination="4gs-o4-gHR" id="zMz-Gz-v8J"/>
+                <outlet property="webView" destination="fFl-YC-Xlt" id="K43-bD-OHy"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="task_btn_start" width="167" height="47"/>
+    </resources>
+</document>

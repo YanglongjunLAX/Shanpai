@@ -183,13 +183,20 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    //进入兑换页面
-    SPExchangeController *vc = [[SPExchangeController alloc] init];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
-    vc.data = self.dataList[indexPath.row];
-    [self.navigationController presentViewController:nav animated:YES completion:^{
-        
-    }];
+    if (ISLogined)
+    {
+        //进入兑换页面
+        SPExchangeController *vc = [[SPExchangeController alloc] init];
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+        vc.data = self.dataList[indexPath.row];
+        [self.navigationController presentViewController:nav animated:YES completion:^{
+            
+        }];
+    }
+    else
+    {
+        [self pressentToLoginViewController];
+    }
 }
 
 - (void)requestStoreInfo:(NSInteger)pageIndex pageSize:(NSInteger)pageSize

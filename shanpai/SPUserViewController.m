@@ -108,7 +108,7 @@
           @"兑换记录",
           @"金豆记录",
           @"修改密码",
-//          @"我的闹钟",
+          @"我的闹钟",
           @"设置",
           @"淘金豆",
           ];
@@ -283,14 +283,14 @@
             
             cell.imageView.image = [UIImage imageNamed:@"user_password_icon"];
             break;
-//        case 6:
-//            
-//            cell.imageView.image = [UIImage imageNamed:@"user_alarm_icon"];
-//            break;
         case 6:
-            cell.imageView.image = [UIImage imageNamed:@"user_setting_icon"];
+            
+            cell.imageView.image = [UIImage imageNamed:@"user_alarm_icon"];
             break;
         case 7:
+            cell.imageView.image = [UIImage imageNamed:@"user_setting_icon"];
+            break;
+        case 8:
             cell.imageView.image = [UIImage imageNamed:@"user_jindou_icon"];
             break;
         default:
@@ -344,9 +344,8 @@
             v = forgetpwVC;
             break;
         }
-//        case 6:
-//            v = [[[AlarmVC alloc]init]autorelease];
-//            break;
+        case 6:
+            break;
         case 7:
             v = [[SPSetController alloc] init];
             break;

@@ -63,6 +63,10 @@
 		016C4DE61A1D9AA50076320F /* UIScrollView+SVPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C4DE41A1D9AA50076320F /* UIScrollView+SVPullToRefresh.m */; };
 		01711A161A3480990090C8C7 /* SPTaskBeginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01711A141A3480990090C8C7 /* SPTaskBeginController.m */; };
 		01711A171A3480990090C8C7 /* SPTaskBeginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01711A151A3480990090C8C7 /* SPTaskBeginController.xib */; };
+		017317D31A39490D00B55A1E /* SPTaskBeginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 017317D21A39490D00B55A1E /* SPTaskBeginView.m */; };
+		017317D51A3949D300B55A1E /* SPTaskFirstView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 017317D41A3949D300B55A1E /* SPTaskFirstView.xib */; };
+		017317D81A39509C00B55A1E /* SPPintuTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 017317D71A39509C00B55A1E /* SPPintuTaskController.m */; };
+		017317DB1A39735000B55A1E /* SPGuessPicController.m in Sources */ = {isa = PBXBuildFile; fileRef = 017317DA1A39735000B55A1E /* SPGuessPicController.m */; };
 		017A97B51A32FF6F00FE4182 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 017A97B41A32FF6F00FE4182 /* BaseModel.m */; };
 		01815EC81A10592600F80EA2 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 01815EC71A10592600F80EA2 /* SSKeychain.m */; };
 		01815ECD1A10599300F80EA2 /* SPUserData.m in Sources */ = {isa = PBXBuildFile; fileRef = 01815ECC1A10599300F80EA2 /* SPUserData.m */; };
@@ -306,6 +310,13 @@
 		01711A131A3480990090C8C7 /* SPTaskBeginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTaskBeginController.h; sourceTree = "<group>"; };
 		01711A141A3480990090C8C7 /* SPTaskBeginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTaskBeginController.m; sourceTree = "<group>"; };
 		01711A151A3480990090C8C7 /* SPTaskBeginController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPTaskBeginController.xib; sourceTree = "<group>"; };
+		017317D11A39490D00B55A1E /* SPTaskBeginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTaskBeginView.h; sourceTree = "<group>"; };
+		017317D21A39490D00B55A1E /* SPTaskBeginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTaskBeginView.m; sourceTree = "<group>"; };
+		017317D41A3949D300B55A1E /* SPTaskFirstView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPTaskFirstView.xib; sourceTree = "<group>"; };
+		017317D61A39509C00B55A1E /* SPPintuTaskController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPintuTaskController.h; sourceTree = "<group>"; };
+		017317D71A39509C00B55A1E /* SPPintuTaskController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPintuTaskController.m; sourceTree = "<group>"; };
+		017317D91A39735000B55A1E /* SPGuessPicController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPGuessPicController.h; sourceTree = "<group>"; };
+		017317DA1A39735000B55A1E /* SPGuessPicController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPGuessPicController.m; sourceTree = "<group>"; };
 		017A97B31A32FF6F00FE4182 /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
 		017A97B41A32FF6F00FE4182 /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		01815EC61A10592600F80EA2 /* SSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychain.h; sourceTree = "<group>"; };
@@ -954,6 +965,10 @@
 				01711A131A3480990090C8C7 /* SPTaskBeginController.h */,
 				01711A141A3480990090C8C7 /* SPTaskBeginController.m */,
 				01711A151A3480990090C8C7 /* SPTaskBeginController.xib */,
+				017317D61A39509C00B55A1E /* SPPintuTaskController.h */,
+				017317D71A39509C00B55A1E /* SPPintuTaskController.m */,
+				017317D91A39735000B55A1E /* SPGuessPicController.h */,
+				017317DA1A39735000B55A1E /* SPGuessPicController.m */,
 			);
 			name = TaskViewController;
 			sourceTree = "<group>";
@@ -1016,6 +1031,9 @@
 				0185D6ED1A26FF0D00B3F37C /* SPTaskCell.h */,
 				0185D6EE1A26FF0D00B3F37C /* SPTaskCell.m */,
 				0185D6EF1A26FF0D00B3F37C /* SPTaskCell.xib */,
+				017317D11A39490D00B55A1E /* SPTaskBeginView.h */,
+				017317D21A39490D00B55A1E /* SPTaskBeginView.m */,
+				017317D41A3949D300B55A1E /* SPTaskFirstView.xib */,
 			);
 			name = TaskAdView;
 			sourceTree = "<group>";
@@ -1494,6 +1512,7 @@
 				0185D6FB1A271E6000B3F37C /* TableViewCell.xib in Resources */,
 				01DE3AA71A11EF00009A88E0 /* SVProgressHUD.bundle in Resources */,
 				01A792611A3585AB00443493 /* SPEditPhoneNumberController.xib in Resources */,
+				017317D51A3949D300B55A1E /* SPTaskFirstView.xib in Resources */,
 				01BEBBC21A0B4AF3007D447F /* SPPKViewController.xib in Resources */,
 				01899FE61A30056900589F7C /* SPGoldRecordController.xib in Resources */,
 				019AB53A1A0C5FE90066E3D0 /* SPTaskAdView.xib in Resources */,
@@ -1565,6 +1584,7 @@
 				01627DD71A2EF1EA00C189C6 /* SPGameDynamicModel.m in Sources */,
 				01ECE0D91A0CAF2D00693595 /* TKProgressBarView.m in Sources */,
 				01ECE0D71A0CAF2D00693595 /* TKAlertCenter.m in Sources */,
+				017317D81A39509C00B55A1E /* SPPintuTaskController.m in Sources */,
 				01B0EFEA1A2427DC0063B143 /* SPMessageModel.m in Sources */,
 				01327EF71A1B6C2D008467B6 /* SVWebViewControllerActivityChrome.m in Sources */,
 				018540D31A1F30F900D93D9D /* SPjindouCell.m in Sources */,
@@ -1594,6 +1614,7 @@
 				01627DD21A2EEDE600C189C6 /* SPGameDynamicView.m in Sources */,
 				01815ECD1A10599300F80EA2 /* SPUserData.m in Sources */,
 				018E574C1A09DB0000BAA18D /* SPLoginViewController.m in Sources */,
+				017317DB1A39735000B55A1E /* SPGuessPicController.m in Sources */,
 				0185D6DF1A26BDB700B3F37C /* SPExangeCell.m in Sources */,
 				0185D6FA1A271E6000B3F37C /* TableViewCell.m in Sources */,
 				014D358A1A08CE5700D86711 /* BLTabbarItem.m in Sources */,
@@ -1602,6 +1623,7 @@
 				01B111C51A1C939C00ECF6B9 /* SPExchangeController.m in Sources */,
 				01FF28BD1A22D3F4004A104F /* SPBeanHeadView.m in Sources */,
 				01B0EFE51A241A510063B143 /* SPMyMessageController.m in Sources */,
+				017317D31A39490D00B55A1E /* SPTaskBeginView.m in Sources */,
 				01BEBBC71A0B4C32007D447F /* HMSegmentedControl.m in Sources */,
 				01B0EFF31A2463720063B143 /* SPMessageController.m in Sources */,
 				01ECE0DF1A0CB55800693595 /* SPHttpClient.m in Sources */,
@@ -1814,11 +1836,25 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/shanpai/ShareSDK/Connection",
+					"$(PROJECT_DIR)/shanpai/ShareSDK/Core",
+					"$(PROJECT_DIR)/shanpai/ShareSDK/Extend/QQConnectSDK",
+					"$(PROJECT_DIR)/shanpai/ShareSDK",
+					"$(PROJECT_DIR)/shanpai/ShareSDK/UI",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "shanpai/shanpai-Prefix.pch";
 				INFOPLIST_FILE = shanpai/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/shanpai/ShareSDK/Extend/SinaWeiboSDK",
+					"$(PROJECT_DIR)/shanpai/ShareSDK/Extend/TencentWeiboSDK",
+					"$(PROJECT_DIR)/shanpai/ShareSDK/Extend/WeChatSDK",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1831,11 +1867,25 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/shanpai/ShareSDK/Connection",
+					"$(PROJECT_DIR)/shanpai/ShareSDK/Core",
+					"$(PROJECT_DIR)/shanpai/ShareSDK/Extend/QQConnectSDK",
+					"$(PROJECT_DIR)/shanpai/ShareSDK",
+					"$(PROJECT_DIR)/shanpai/ShareSDK/UI",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "shanpai/shanpai-Prefix.pch";
 				INFOPLIST_FILE = shanpai/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/shanpai/ShareSDK/Extend/SinaWeiboSDK",
+					"$(PROJECT_DIR)/shanpai/ShareSDK/Extend/TencentWeiboSDK",
+					"$(PROJECT_DIR)/shanpai/ShareSDK/Extend/WeChatSDK",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

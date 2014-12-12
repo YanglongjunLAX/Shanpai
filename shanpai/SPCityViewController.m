@@ -208,8 +208,17 @@
     {
         if (self.cityChanged)
         {
-            [self.navigationController popViewControllerAnimated:YES];
             self.cityChanged(self.selectCity);
+            //可以返回
+            if (self.navigationController.viewControllers.count > 1)
+            {
+                [self.navigationController popViewControllerAnimated:YES];
+            }
+            else
+            {
+                [self dismissViewControllerAnimated:YES completion:^{
+                }];
+            }
         }
     }
 }

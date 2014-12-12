@@ -10,18 +10,4 @@
 
 @interface SPTaskADView : UIView
 
-//总页数
-@property (nonatomic, assign)NSUInteger numberOfPage;
-//类型
-@property (nonatomic, copy) NSString *type;
-//
-@property (nonatomic, copy) NSString *desStr;
-
-@end
-
-//colecctionView
-@interface ADCollectionViewCell : UICollectionViewCell
-
-@property (nonatomic, copy) NSString *imageURL;
-
 @end

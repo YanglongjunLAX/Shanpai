@@ -98,14 +98,18 @@
     }
     __weak typeof(self) weakSelf = self;
     [SPGuessFingerModel spgRequestRandUserInfo:^(NSDictionary *dictionary, NSError *error) {
-        weakSelf.userInfo = dictionary[@"data"];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            if (weakSelf.userInfo[@"avatar"] != nil)
-            {
-                [weakSelf.enemyHeadImage setImageWithURL:[NSURL URLWithString:self.userInfo[@"avatar"]]];
-            }
-            weakSelf.enemyNameLabel.text = weakSelf.userInfo[@"nickname"];
-        });
+        NSDictionary *otherInfo = dictionary[@"data"];
+        if (![otherInfo[@"uid"] isEqualToString:[SPUserData userID]])
+        {
+            weakSelf.userInfo = dictionary[@"data"];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if (weakSelf.userInfo[@"avatar"] != nil)
+                {
+                    [weakSelf.enemyHeadImage setImageWithURL:[NSURL URLWithString:self.userInfo[@"avatar"]]];
+                }
+                weakSelf.enemyNameLabel.text = weakSelf.userInfo[@"nickname"];
+            });
+        }
     }];
 }
 

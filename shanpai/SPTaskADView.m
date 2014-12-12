@@ -7,162 +7,110 @@
 //
 
 #import "SPTaskADView.h"
+#import "SwipeView.h"
 
-static NSString *CellIdentifier = @"AdcellIdentifier";
+#import "SPAdData.h"
 
-@interface SPTaskADView()<UICollectionViewDataSource,UICollectionViewDelegate>
-@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
-@property (weak, nonatomic) IBOutlet UILabel          *typeLabel;
-@property (weak, nonatomic) IBOutlet UILabel          *descripetLabel;
-@property (weak, nonatomic) IBOutlet UIPageControl    *pageController;
 
-//布局
-@property (nonatomic, strong) UICollectionViewFlowLayout   *layout;
+@interface SPTaskADView() <SwipeViewDataSource, SwipeViewDelegate>
+@property (weak, nonatomic) IBOutlet SwipeView *imageswipe;
+@property (weak, nonatomic) IBOutlet UILabel *tagLabel;
 
-//配置
-- (void)configCollectionView;
+@property (weak, nonatomic) IBOutlet UILabel *contentLabel;
+@property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
+
+//广告数据
+@property (nonatomic, strong) NSArray  *dataList;
+
+- (void)getAdData;
+- (void)sptSetSwipeView;
 @end
 
 @implementation SPTaskADView
 - (id)init
 {
-    self = [super init];
-    if (self)
-    {
-        
-    }
+    NSArray *array = [[NSBundle mainBundle] loadNibNamed:@"SPTaskAdView"
+                                                   owner:self
+                                                 options:nil];
+    self = array[0];
+    [self sptSetSwipeView];
     return self;
+}
+
+- (void)didMoveToSuperview
+{
+    [super didMoveToSuperview];
+    [self getAdData];
 }
 
 - (void)awakeFromNib
 {
-//    [self configCollectionView];
+    [self getAdData];
 }
 
-#pragma mark Private Method
-//配置collection
-- (void)configCollectionView
+- (void)getAdData
 {
-    self.collectionView.delegate    = self;
-    self.collectionView.dataSource  = self;
-    self.collectionView.backgroundColor = [UIColor grayColor];
-    [self.collectionView registerClass:[ADCollectionViewCell class] forCellWithReuseIdentifier:CellIdentifier];
+    //请求的路径
+    NSString *path = @"AdvertBanners/ls";
+    //参数
+    NSDictionary *params = @{@"advType":@"index",@"listRows":@"5"};
     
-    if (!self.layout)
-    {
-        self.layout = [[UICollectionViewFlowLayout alloc] init];
-        self.layout.minimumInteritemSpacing = 0;
-        self.layout.minimumLineSpacing      = 0;
-        //滚动方向
-        self.layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    }
-    
-    self.layout.itemSize = CGSizeMake(CGRectGetWidth([UIScreen mainScreen].bounds), 130.0f);
-    
-    [self.collectionView setCollectionViewLayout:self.layout];
+    __weak typeof(self) weakSelf = self;
+    [SPAdData getTaskAdWithPath:path params:params block:^(NSArray *array, NSError *error) {
+        weakSelf.dataList = array;
+        [weakSelf.imageswipe reloadData];
+        weakSelf.pageControl.numberOfPages = array.count;
+    }];
     
 }
 
-- (void)setNumberOfPage:(NSUInteger)numberOfPage
+- (NSInteger)numberOfItemsInSwipeView:(SwipeView *)swipeView
 {
-    if (_numberOfPage != numberOfPage)
+    return self.dataList.count;
+}
+
+- (UIView *)swipeView:(SwipeView *)swipeView viewForItemAtIndex:(NSInteger)index reusingView:(UIView *)view
+{
+    UIImageView *imageView = (UIImageView *)view;
+    if (imageView == nil)
     {
-        _numberOfPage = numberOfPage;
-        self.pageController.numberOfPages = numberOfPage;
-//        [self.collectionView reloadData]; //
+        imageView = [[UIImageView alloc] initWithFrame:self.bounds];
     }
+    
+    SPAdData *data = self.dataList[index];
+    [imageView setImageWithURL:[NSURL URLWithString:data.image]];
+    self.contentLabel.text = data.title;
+    self.pageControl.currentPage = index;
+    self.tagLabel.text = data.tags;
+    return imageView;
 }
 
-- (void)setType:(NSString *)type
+- (CGSize)swipeViewItemSize:(SwipeView *)swipeView
 {
-    _type = type;
-    self.typeLabel.text = type;
+    return swipeView.bounds.size;
 }
 
-- (void)setDesStr:(NSString *)desStr
+- (void)swipeView:(SwipeView *)swipeView didSelectItemAtIndex:(NSInteger)index
 {
-    _desStr = desStr;
-    self.descripetLabel.text = desStr;
+    //taskOpenWebView
+    SPAdData *data = self.dataList[index];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"taskOpenWebView"
+                                                        object:nil
+                                                      userInfo:@{@"url"   :  data.url}];
 }
 
-#pragma mark - collection delegate
-#pragma mark - collection Delegate
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-//    return self.dataArray.count;
-    return self.numberOfPage;
-}
-
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+- (void)swipeViewDidEndDragging:(SwipeView *)swipeView willDecelerate:(BOOL)decelerate
 {
-//    static NSString *cellIdentifier = @"simpleCell";
-    ADCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
-    if (!cell)
-    {
-        cell = [[ADCollectionViewCell alloc] init];
-    }
-//
-//    __weak __typeof(&*self)weakSelf = self;
-//    cell.webViewBlock = ^(NSInteger index)
-//    {
-//        __strong __typeof(&*weakSelf)strongSelf = weakSelf;
-//        [strongSelf showWebView:index];
-//    };
-//    
-//    cell.QRCodeBlock = ^(NSString *path)
-//    {
-//        __strong __typeof(&*weakSelf)strongSelf = weakSelf;
-//        [strongSelf showQRCodeView:path];
-//    };
-//    
-//    youxiu* yObj = (youxiu *)self.dataArray[indexPath.row];
-//    cell.itemInfo = yObj;
-//    
-    return cell;
+    SPAdData *data = self.dataList[swipeView.currentItemIndex];
+    self.contentLabel.text = data.title;
+    self.pageControl.currentPage = swipeView.currentItemIndex;
+    self.tagLabel.text = data.tags;
 }
 
-@end
-
-/////////
-@interface ADCollectionViewCell()
-
-@property (nonatomic, strong) UIImageView *imageView;
-
-@end
-
-@implementation ADCollectionViewCell
-
-- (id)init
+- (void)sptSetSwipeView
 {
-    self = [super init];
-    if (self)
-    {
-        [self.contentView addSubview:self.imageView];
-    }
-    return self;
-}
-
-- (void)updateConstraints
-{
-    [super updateConstraints];
-    [_imageView autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:.0f];
-    [_imageView autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:.0f];
-    [_imageView autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:.0f];
-    [_imageView autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:.0f];
-}
-
-#pragma mark - Private Method
-- (UIImageView *)imageView
-{
-    if (!_imageView)
-    {
-        _imageView = [[UIImageView alloc] init];
-    }
-    return _imageView;
-}
-//设置图片
-- (void)setImageURL:(NSString *)imageURL
-{
-    [self.imageView setImageWithURL:[NSURL URLWithString:imageURL]];
+    self.imageswipe.dataSource = self;
+    self.imageswipe.delegate   = self;
 }
 
 @end

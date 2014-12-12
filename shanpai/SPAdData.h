@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BaseModel.h"
 
-@interface SPAdData : NSObject
+@interface SPAdData : BaseModel
 /*!
  *  服务端返回的广告相关的参数，
  *  很多不知道作用！
@@ -30,14 +31,6 @@
 @property (nonatomic, copy) NSString *update_time;
 @property (nonatomic, copy) NSString *url;
 
-/*!
- *  init with NSDictionary
- *
- *  @param info NSDictionary
- *
- *  @return adobj
- */
-- (id)initWithInfo:(NSDictionary *)info;
 /*!
  *  获取广告
  *

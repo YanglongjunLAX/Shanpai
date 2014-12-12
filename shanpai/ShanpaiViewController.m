@@ -176,7 +176,7 @@
             SPdiscernController *viewController = [[SPdiscernController alloc] init];
             viewController.image = self.sourceImage;
             viewController.itemID = info[@"id"];
-            [self.navigationController pushViewController:viewController animated:YES];
+            [self presentViewControllerWithNavc:viewController];
         }
         else
         {

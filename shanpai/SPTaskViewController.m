@@ -11,6 +11,9 @@
 #import "SPTaskCell.h"
 #import "SPTaskModel.h"
 #import "SPTaskBeginController.h"
+#import "SPPintuTaskController.h"
+#import "SPGuessPicController.h"
+#import "SVModalWebViewController.h"
 
 @interface SPTaskViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -18,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *moneyLabel;
 @property (strong, nonatomic) SPTaskADView *adView;
 @property (strong, nonatomic) NSMutableArray *dataList;
+
 
 //分页请求页数
 @property (assign, nonatomic) NSInteger  pageNumber;
@@ -31,6 +35,8 @@
 - (void)sptSetTableView;
 //加载
 - (void)loadData;
+//打开广播链接
+- (void)openWebSiteWithUrl:(NSNotification *)notify;
 @end
 
 @implementation SPTaskViewController
@@ -46,6 +52,11 @@
     self.pageNumber = 0;
     [self sptSetTableView];
     [self loadData];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(openWebSiteWithUrl:)
+                                                 name:@"taskOpenWebView"
+                                               object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -58,6 +69,14 @@
 - (void)updateViewConstraints
 {
     [super updateViewConstraints];
+    if (self.adView && self.adView.superview)
+    {
+        [self.adView autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:0.0f];
+        
+        [self.adView autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:0.0f];
+        [self.adView autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:0.0f];
+        [self.adView autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:0.0f];
+    }
 }
 
 - (NSMutableArray *)dataList
@@ -67,6 +86,15 @@
         _dataList = [[NSMutableArray alloc] init];
     }
     return _dataList;
+}
+
+- (SPTaskADView *)adView
+{
+    if (!_adView)
+    {
+        _adView = [[SPTaskADView alloc] init];
+    }
+    return _adView;
 }
 
 #pragma mark - private Method
@@ -110,6 +138,11 @@
     }
 }
 
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (void)sptSetTableView
 {
     self.tableView.delegate   = self;
@@ -128,7 +161,9 @@
 
 - (void)configTabHead
 {
-    
+    UIView *headView = [[UIView alloc] initWithFrame:CGRectMake( 0, 0, CGRectGetWidth([UIScreen mainScreen].bounds), 130)];
+    self.tableView.tableHeaderView = headView;
+    [self.tableView.tableHeaderView addSubview:self.adView];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -170,6 +205,18 @@
             taskBeginVC.type = SPTaskQuestionnaire;
             [self presentViewControllerWithNavc:taskBeginVC];
         }
+        else if ([module isEqualToString:@"Puzzle"])//拼图
+        {
+            SPPintuTaskController *pintuVC = [[SPPintuTaskController alloc] init];
+            pintuVC.model = model;
+            [self presentViewControllerWithNavc:pintuVC];
+        }//猜图
+        else if ([module isEqualToString:@"GuessPic"])
+        {
+            SPGuessPicController *guessVC = [[SPGuessPicController alloc] init];
+            guessVC.model = model;
+            [self presentViewControllerWithNavc:guessVC];
+        }
     }
     else
     {
@@ -195,6 +242,14 @@
          [self.tableView.pullToRefreshView stopAnimating];
          [self.tableView.infiniteScrollingView stopAnimating];
     }];
+}
+
+- (void)openWebSiteWithUrl:(NSNotification *)notify;
+{
+    NSDictionary *info = notify.userInfo;
+    NSString *url = info[@"url"];
+    SVModalWebViewController *webViewController = [[SVModalWebViewController alloc] initWithAddress:url];
+    [self presentViewController:webViewController animated:YES completion:NULL];
 }
 
 @end

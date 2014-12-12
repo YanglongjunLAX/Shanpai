@@ -246,6 +246,11 @@
 
 - (void)pkTaiOpenViewController:(NSNotification *)notify
 {
+    if (!ISLogined)
+    {
+        [self pressentToLoginViewController];
+        return;
+    }
     NSDictionary *info = notify.userInfo;
     NSUInteger row = [info[@"row"] integerValue];
     UIViewController  *VC = nil;

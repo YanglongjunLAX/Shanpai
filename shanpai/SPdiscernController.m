@@ -27,6 +27,7 @@
     [super viewDidLoad];
     self.title = @"图像上传";
     [self spsSetTableView];
+    [self setBackLeftItem];
 }
 
 - (void)updateViewConstraints
@@ -90,7 +91,7 @@
                              //上传成功
                              if ([info[@"status"] integerValue] == 1)
                              {
-                                 [self.navigationController popToRootViewControllerAnimated:YES];
+                                 
                              }
                          }];
 }

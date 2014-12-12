@@ -16,31 +16,6 @@
 
 @implementation SPAdData
 
-- (id)initWithInfo:(NSDictionary *)info
-{
-    self = [super init];
-    if (self)
-    {
-        self.create_time = info[@"create_time"];
-        self._id         = info[@"id"];
-        self.image       = info[@"image"];
-        self.list_brand  = SPFormatstring(info[@"list_brand"]);
-        self.list_index  = SPFormatstring(info[@"list_index"]);
-        self.list_pk     = SPFormatstring(info[@"list_pk"]);
-        self.list_store  = SPFormatstring(info[@"list_store"]);
-        self.status      = SPFormatstring(info[@"status"]);
-        self.tag_brand   = SPFormatstring(info[@"tag_brand"]);
-        self.tag_index   = SPFormatstring(info[@"tag_index"]);
-        self.tag_pk      = SPFormatstring(info[@"tag_pk"]);
-        self.tag_store   = SPFormatstring(info[@"tag_store"]);
-        self.tags        = SPFormatstring(info[@"tags"]);
-        self.title       = SPFormatstring(info[@"title"]);
-        self.update_time = SPFormatstring(info[@"update_time"]);
-        self.url         = SPFormatstring(info[@"url"]);
-    }
-    return self;
-}
-
 + (void)getTaskAdWithPath:(NSString *)path params:(NSDictionary *)params block:(void (^)(NSArray *, NSError *))block
 {
     [[SPHttpClient manager] GET:path
@@ -72,7 +47,7 @@
     __block NSDictionary  *info;
     [array enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         info = (NSDictionary *)obj;
-        SPAdData *objData = [[SPAdData alloc] initWithInfo:info];
+        SPAdData *objData = [[SPAdData alloc] initWithDictionary:info];
         [resarray addObject:objData];
     }];
     
