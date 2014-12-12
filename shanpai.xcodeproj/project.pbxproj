@@ -68,6 +68,7 @@
 		017317D81A39509C00B55A1E /* SPPintuTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 017317D71A39509C00B55A1E /* SPPintuTaskController.m */; };
 		017317DB1A39735000B55A1E /* SPGuessPicController.m in Sources */ = {isa = PBXBuildFile; fileRef = 017317DA1A39735000B55A1E /* SPGuessPicController.m */; };
 		017A97B51A32FF6F00FE4182 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 017A97B41A32FF6F00FE4182 /* BaseModel.m */; };
+		017AA78D1A3A830E00D39DF8 /* SPUpdateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 017AA78C1A3A830E00D39DF8 /* SPUpdateModel.m */; };
 		01815EC81A10592600F80EA2 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 01815EC71A10592600F80EA2 /* SSKeychain.m */; };
 		01815ECD1A10599300F80EA2 /* SPUserData.m in Sources */ = {isa = PBXBuildFile; fileRef = 01815ECC1A10599300F80EA2 /* SPUserData.m */; };
 		01815ED31A1069E600F80EA2 /* Device.m in Sources */ = {isa = PBXBuildFile; fileRef = 01815ED01A1069E600F80EA2 /* Device.m */; };
@@ -319,6 +320,8 @@
 		017317DA1A39735000B55A1E /* SPGuessPicController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPGuessPicController.m; sourceTree = "<group>"; };
 		017A97B31A32FF6F00FE4182 /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
 		017A97B41A32FF6F00FE4182 /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		017AA78B1A3A830E00D39DF8 /* SPUpdateModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPUpdateModel.h; sourceTree = "<group>"; };
+		017AA78C1A3A830E00D39DF8 /* SPUpdateModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPUpdateModel.m; sourceTree = "<group>"; };
 		01815EC61A10592600F80EA2 /* SSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychain.h; sourceTree = "<group>"; };
 		01815EC71A10592600F80EA2 /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychain.m; sourceTree = "<group>"; };
 		01815ECB1A10599300F80EA2 /* SPUserData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPUserData.h; sourceTree = "<group>"; };
@@ -867,6 +870,15 @@
 			path = SVPullToRefresh;
 			sourceTree = "<group>";
 		};
+		017AA78A1A3A82DB00D39DF8 /* Update */ = {
+			isa = PBXGroup;
+			children = (
+				017AA78B1A3A830E00D39DF8 /* SPUpdateModel.h */,
+				017AA78C1A3A830E00D39DF8 /* SPUpdateModel.m */,
+			);
+			name = Update;
+			sourceTree = "<group>";
+		};
 		01815EC51A10592600F80EA2 /* SSKeychain */ = {
 			isa = PBXGroup;
 			children = (
@@ -879,6 +891,7 @@
 		01815EC91A10595D00F80EA2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				017AA78A1A3A82DB00D39DF8 /* Update */,
 				01899FF91A30659500589F7C /* Set */,
 				01F10E0A1A280C9200C6F5FA /* Shanpai */,
 				0185D6E91A26DA9500B3F37C /* Task */,
@@ -1621,6 +1634,7 @@
 				01FF28B91A22CC19004A104F /* SPBeanController.m in Sources */,
 				014CBA7A1A36F63000157BE5 /* GuessPicController.m in Sources */,
 				01B111C51A1C939C00ECF6B9 /* SPExchangeController.m in Sources */,
+				017AA78D1A3A830E00D39DF8 /* SPUpdateModel.m in Sources */,
 				01FF28BD1A22D3F4004A104F /* SPBeanHeadView.m in Sources */,
 				01B0EFE51A241A510063B143 /* SPMyMessageController.m in Sources */,
 				017317D31A39490D00B55A1E /* SPTaskBeginView.m in Sources */,
