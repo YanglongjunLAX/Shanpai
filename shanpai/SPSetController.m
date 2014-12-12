@@ -10,6 +10,7 @@
 #import "SVModalWebViewController.h"
 #import "SPImageRecordController.h"
 #import "SPOpinionBackController.h"
+#import "SPUpdateModel.h"
 
 @interface SPSetController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -18,6 +19,8 @@
 @property (nonatomic, strong) NSArray  *dataList;
 
 - (void)spsSetTableView;
+//检查版本
+- (void)checkVersion;
 @end
 
 @implementation SPSetController
@@ -112,6 +115,11 @@
                 [self openWebsetInside:kForAgreement];
                 break;
             }
+            case 3://检查更新
+            {
+                [self checkVersion];
+                break;
+            }
             case 5:
             {
                 [self openWebsetInside:kForHelpUrl];
@@ -133,6 +141,66 @@
     SVModalWebViewController *vc = [[SVModalWebViewController alloc] initWithAddress:path];
     [self presentViewController:vc animated:YES completion:^{
     }];
+}
+
+//检查版本
+- (void)checkVersion
+{
+    [SVProgressHUD show];
+    [SPUpdateModel spuGetversionBlock:^(NSDictionary *info, NSError *error) {
+        if (!error)
+        {
+            NSArray *array = info[@"results"];
+            NSDictionary *data = array[0];
+            NSString *versionStr = [data[@"version"] description];
+            
+            NSString *localVersion = [SPUpdateModel spuGetLocalVersion];
+            
+            if ([localVersion compare:versionStr options:NSNumericSearch]==NSOrderedAscending)
+            {
+                NSLog(@"更新：old:%@,new:%@",localVersion,versionStr);
+                
+                NSString *releaseNotes = [data[@"releaseNotes"] description];
+                NSString *appStoreVersion = [data[@"version"] description];
+                NSString *appName  = [data[@"trackName"] description];
+                NSString *title = [NSString stringWithFormat:@"%@ %@", appName, appStoreVersion];
+                
+                //检测当前有新的版本可以更新,是否立即更新?
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
+                                                                message:releaseNotes
+                                                               delegate:self
+                                                      cancelButtonTitle:@"暂不"
+                                                      otherButtonTitles:@"更新", nil];
+                
+                for (UIView * view in alert.subviews)
+                {
+                    if ([[view class] isSubclassOfClass:[UILabel class]])
+                    {
+                        UILabel *label = (UILabel *)view;
+                        if ([label.text isEqualToString:title])
+                        {
+                            continue;
+                        }
+                        label.textAlignment = NSTextAlignmentLeft;
+                    }
+                }
+                [alert show];
+            }
+            else
+            {
+                [SVProgressHUD showSuccessWithStatus:@"已经是最新版本"];
+            }
+        }
+        [SVProgressHUD dismiss];
+    }];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1)
+    {
+        [SPUpdateModel openAppStoreUrl];
+    }
 }
 
 @end
